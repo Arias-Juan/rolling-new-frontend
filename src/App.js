@@ -5,7 +5,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 
 function App() {
