@@ -18,6 +18,7 @@ import Fotografia from './components/Categorias/Fotografia';
 import Politica from './components/Categorias/Politica';
 import Salud from './components/Categorias/Salud';
 import Tecnologia from './components/Categorias/Tecnologia';
+import Login from './components/Layout/Login';
 
 
 function App() {
@@ -51,6 +52,9 @@ function App() {
       </Route>
       <Route exact path="/categorias/tecnologia">
         <Tecnologia></Tecnologia>
+      </Route>
+      <Route>
+        <Login></Login>
       </Route>
     </Switch>
     <Footer></Footer>
