@@ -8,6 +8,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 import logoEncabezado from "../../img/Principal/logo-encabezado.svg";
+import '../../App.css';
 
 const Header = () => {
   return (
@@ -85,6 +86,7 @@ const Header = () => {
                   Registrarse
                 </NavDropdown.Item>
               </NavDropdown>
+              <NavLink exact={true} to="/*" className="btn-rn-outline ml-2"><FaRegPaperPlane/></NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

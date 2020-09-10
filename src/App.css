@@ -1,0 +1,14 @@
+.btn-rn-outline {
+  border: 1.2px solid #ff5e1f;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ff5e1f;
+  padding: 5px 11px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-rn-outline:hover{
+    color: #FFF;
+    background-color: #ff5e1f;
+}
