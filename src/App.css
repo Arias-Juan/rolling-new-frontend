@@ -60,3 +60,48 @@
   -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
   box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
 }
+
+.rn-footer{
+  background-color: #1f1f1f;
+}
+
+.logo-footer{
+  fill: #ffffff;
+}
+
+.text-footer{
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.boton-footer{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: larger;
+  margin-top: none   !important;
+}
+
+.boton-footer:hover{
+  color: #ff5e1f;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.link-footer{
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.link-footer:hover{
+  color: #ff5e1f;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hr-w{
+  border-color: #5e5e5e;
+}
