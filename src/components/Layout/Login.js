@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
+// import Row from "react-bootstrap/Row";
 import { FaFacebook, FaTwitter } from 'react-icons/fa'
 import { SiGmail } from "react-icons/si";
 

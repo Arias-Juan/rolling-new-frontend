@@ -17,6 +17,7 @@ import Tecnologia from "./components/Categorias/Tecnologia";
 import Error404 from "./components/common/Error404";
 import Contacto from "./components/Layout/Contacto";
 import Nosotros from "./components/Layout/Nosotros";
+import Login from "./components/Layout/Login";
 
 function App() {
   return (
@@ -58,6 +59,9 @@ function App() {
         </Route>
         <Route exact path="/nosotros">
           <Nosotros></Nosotros>
+        </Route>
+        <Route exact path="/login">
+          <Login></Login>
         </Route>
       </Switch>
       <Footer></Footer>
