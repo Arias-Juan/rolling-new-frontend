@@ -41,7 +41,7 @@ const Footer = () => {
       <footer className="rn-footer pt-4 pb-3">
         <Container fluid>
           <Container>
-            <Row>
+            <Row className="d-flex justify-content-center">
               <Col sm={12} md={3}>
                 <img
                   className="logo-footer"
@@ -93,7 +93,7 @@ const Footer = () => {
                   </Link>
                 </div>
               </Col>
-              <Col sm={12} md={4} className="mt-3 ml-2 mr-4">
+              <Col sm={12} md={4} className="mt-3 mx-4">
                 <p className="text-footer">secciones</p>
                 <Row>
                   <Link
