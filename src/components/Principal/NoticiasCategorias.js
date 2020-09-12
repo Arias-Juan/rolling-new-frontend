@@ -1,15 +1,19 @@
 import React from 'react';
 import CardCategoria from './CardCategoria';
+import { Container } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row'
 
 const NoticiasCategorias = () => {
     return (
-        <div className="shadow border rounded p-3 mb-3">
-            <div className="row">
-                <CardCategoria></CardCategoria>
-                <CardCategoria></CardCategoria>
-                <CardCategoria></CardCategoria>
-                <CardCategoria></CardCategoria>
-            </div>
+        <div className="p-3 mb-3">
+            <Container fluid>
+                <Row className="d-flex justify-content-around">
+                    <CardCategoria></CardCategoria>
+                    <CardCategoria></CardCategoria>
+                    <CardCategoria></CardCategoria>
+                    <CardCategoria></CardCategoria>
+                </Row>
+            </Container>
         </div>
     );
 };
