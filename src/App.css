@@ -105,3 +105,53 @@
 .hr-w{
   border-color: #5e5e5e;
 }
+
+/* estilos pagina principal */
+.lugarClima{
+  font-size: 20px;
+}
+.temperaturaClima{
+  font-size: 25px;
+}
+.divisas{
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px){ 
+  .lugarClima{
+    font-size: 15px;
+  }
+  .temperaturaClima{
+    font-size: 20px;
+  }
+  .divisas{
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 599px){ 
+  .lugarClima{
+    font-size: 10px;
+  }
+  .temperaturaClima{
+    font-size: 15px;
+  }
+  .divisas{
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 499px){ 
+  .lugarClima{
+    font-size: 10px;
+  }
+  .temperaturaClima{
+    font-size: 12px;
+  }
+  .divisas{
+    font-size: 9px;
+  }
+
+  .columnaClima{
+    padding: 0px !important;
+  }
+}

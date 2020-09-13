@@ -25,7 +25,7 @@ const ApiClima = () => {
     }
 
     return (
-        <div className="p-2 rounded shadow p-2 mb-3">
+        <div className="p-1 rounded shadow">
             <DivClima clima={clima}></DivClima>
         </div>
     );

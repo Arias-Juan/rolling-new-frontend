@@ -19,7 +19,9 @@ const ApiMoneda = () => {
     }
 
     return (
-        <DivMoneda ratesAPI={ratesAPI}></DivMoneda>
+        <div className="p-2 rounded shadow pre-footer">
+            <DivMoneda ratesAPI={ratesAPI}></DivMoneda>
+        </div>
     );
 };
 

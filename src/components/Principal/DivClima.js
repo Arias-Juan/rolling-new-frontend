@@ -9,22 +9,21 @@ const DivClima = ({ clima }) => {
     }
 
     return (
-        <div className="p-2">
-            <h5>{clima.name}</h5>
-            <Container fluid>
-                <Row>
-                    <Col md={5}> <img src={`http://openweathermap.org/img/wn/10d@2x.png`}></img> </Col>
-                    <Col className="d-flex align-items-center"> 
+        <Container fluid>
+            <Row>
+                <Col xs={6} className="d-flex align-items-center">
+                    <p className='m-0 lugarClima'>{clima.name}</p>
+                </Col>
+                <Col xs={6} className="text-center columnaClima">
+                    {(Object.entries(clima).length !== 0) ? <img src={`http://openweathermap.org/img/wn/${clima.weather[0].icon}.png`} alt={clima.weather[0].description}></img> : null}
+
                     {
-                        (Object.entries(clima).length !== 0) ? <h3 className="mx-auto">{(clima.main.temp) - 273.15} °C</h3> : null
-                    } 
-                    </Col>
-                </Row>
-            </Container>
+                        (Object.entries(clima).length !== 0) ? <p className="mx-auto temperaturaClima">{(clima.main.temp) - 273.15} °C</p> : null
+                    }
 
-
-
-        </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

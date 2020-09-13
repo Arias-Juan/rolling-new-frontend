@@ -12,20 +12,22 @@ import Col from 'react-bootstrap/Col'
 const Inicio = () => {
     return (
         <section>
+            <Container fluid>
+                <Row className="d-flex align-items-center">
+                    <Col xs={4} className="columnaClima">
+                        <ApiClima></ApiClima>
+                    </Col>
+                    <Col xs={8} className="columnaMoneda">
+                        <ApiMoneda></ApiMoneda>
+                    </Col>
+                </Row>
+            </Container>
+
+
             <div className="p-3 my-3 mx-5">
-                <Container fluid>
-                    <Row className="d-flex justify-content-around">
-                        <Col md={8}>
-                            <UltimasNoticias></UltimasNoticias>
-                            <UltimasNoticias></UltimasNoticias>
-                            <UltimasNoticias></UltimasNoticias>
-                        </Col>
-                        <Col md={3}>
-                            <ApiClima></ApiClima>
-                            <ApiMoneda></ApiMoneda>
-                        </Col>
-                    </Row>
-                </Container>
+                <UltimasNoticias></UltimasNoticias>
+                <UltimasNoticias></UltimasNoticias>
+                <UltimasNoticias></UltimasNoticias>
             </div>
 
             <BannerCovid className="container"></BannerCovid>
