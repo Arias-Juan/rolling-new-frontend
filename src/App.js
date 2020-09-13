@@ -51,9 +51,9 @@ function App() {
         <Route exact path="/categorias/tecnologia">
           <Tecnologia></Tecnologia>
         </Route>
-        <Route exact path="*">
+        {/* <Route exact path="*">
           <Error404></Error404>
-        </Route>
+        </Route> */}
         <Route exact path="/contacto">
           <Contacto></Contacto>
         </Route>
