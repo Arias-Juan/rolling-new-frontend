@@ -1,10 +1,19 @@
 import React from 'react';
+import Banner from "./Common/Banner";
+import Body from "./Common/Body";
+import PublicidadH from "../common/PublicidadH";
 
-const Politica = () => {
+const Politica = (props) => {
     return (
         <div>
-            <h1>Politica</h1>
+        <Banner titulo={props.categorias[5]}></Banner>
+        <hr></hr>
+        <div className="container-fluid">
+          <PublicidadH></PublicidadH>
         </div>
+        <hr></hr>
+        <Body></Body>
+      </div>
     );
 };
 

@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { Fragment } from "react";
+import HCard from "./common/HCard";
+import VCard from "./common/VCard";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const UltimasNoticias = () => {
-    return (
-        <div className="shadow rounded p-4 mb-4">
-            <h3>TITULO ULTIMA NOTICIA</h3>
-            <hr></hr>
-            <p>imagen ultima noticia</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, fermentum faucibus eleifend venenatis fusce dignissim himenaeos, imperdiet scelerisque rutrum nam nullam sagittis. Semper hac nisl sem ridiculus odio litora ut massa, proin feugiat suscipit duis facilisis risus. Quam congue facilisis natoque nostra praesent dictum porttitor tempus est at dictumst, tortor ornare semper turpis euismod magna morbi placerat vulputate enim.</p>
-            
-            
-        </div>
-    );
+  return (
+    <Fragment>
+      <Row>
+        <Col sm={12} md={6}>
+          <HCard></HCard>
+        </Col>
+        <Col sm={12} md={6}>
+        <h3 className="titulo-ppal mb-4">Noticias Recientes</h3>
+          <VCard></VCard>
+          <VCard></VCard>
+          <VCard></VCard>
+        </Col>
+      </Row>
+    </Fragment>
+  );
 };
 
 export default UltimasNoticias;

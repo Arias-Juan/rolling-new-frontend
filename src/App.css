@@ -16,6 +16,31 @@
   background-color: #ff5e1f;
 }
 
+.btn-rn{
+  color: #fff  !important;
+  background-color: #ff5e1f   !important;
+}
+
+.btn-rn{
+  color: #fff  !important;
+  background-color: #ff5e1f   !important;
+  border: none !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  font-size: larger !important;
+}
+.btn-rn:hover{
+  color: #fff  !important;
+  background-color: #ff5e1f   !important;
+  border: none !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  font-size: larger !important;
+  -webkit-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+}
+
 .rn-nav-link {
   color: #1f1f1f;
   font-weight: 500;
@@ -80,6 +105,10 @@
   text-decoration: none;
   font-size: larger;
   margin-top: none   !important;
+}
+
+.color-naranja{
+  color: #ff5e1f;
 }
 
 .boton-footer:hover{
@@ -162,4 +191,8 @@
 
 .swiper-button-next, .swiper-button-prev{
   color: #ff5e1f !important;  
+}
+
+.carousel-indicators{
+  margin-bottom: 0px !important;
 }

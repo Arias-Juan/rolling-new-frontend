@@ -1,0 +1,44 @@
+{
+  "noticia": [
+    {
+      "tituloNoticia": "sasas",
+      "descripcionBreve": "aaaa",
+      "descripcionDetallada": "qqqq",
+      "imagenPrincipal": "aaaaa",
+      "categoria": "tecnologia",
+      "autor": "lll",
+      "fecha": "66666",
+      "id": 11
+    },
+    {
+      "tituloNoticia": "boca campeon del mundo",
+      "descripcionBreve": "boca",
+      "descripcionDetallada": "dadsdadad",
+      "imagenPrincipal": "daddad",
+      "categoria": "deportes",
+      "autor": "dadadada",
+      "fecha": "1111111",
+      "id": 12
+    },
+    {
+      "tituloNoticia": "boca",
+      "descripcionBreve": "final de liga",
+      "descripcionDetallada": "boca gano",
+      "imagenPrincipal": "222",
+      "categoria": "deportes",
+      "autor": "ssdsd",
+      "fecha": "22222",
+      "id": 13
+    },
+    {
+      "tituloNoticia": "ssdsada",
+      "descripcionBreve": "kkk",
+      "descripcionDetallada": "hhhh",
+      "imagenPrincipal": "vhvhkv",
+      "categoria": "economia",
+      "autor": "hvhvhv",
+      "fecha": "8888",
+      "id": 14
+    }
+  ]
+}
