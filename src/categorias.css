@@ -96,3 +96,8 @@
     font-weight: 800;
     text-transform: uppercase;
 }
+
+.titulo-ppal{
+    font-weight: 900;
+    font-size: 3.1rem;
+}
