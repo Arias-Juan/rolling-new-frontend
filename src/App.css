@@ -1,0 +1,186 @@
+.body {
+  font-family: "Open Sans", sans-serif;
+}
+.btn-rn-outline {
+  border: 1.2px solid #ff5e1f;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ff5e1f;
+  padding: 5px 11px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-rn-outline:hover {
+  color: #fff;
+  background-color: #ff5e1f;
+}
+
+.btn-rn{
+  color: #fff  !important;
+  background-color: #ff5e1f   !important;
+}
+
+.btn-rn{
+  color: #fff  !important;
+  background-color: #ff5e1f   !important;
+  border: none !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  font-size: larger !important;
+}
+.btn-rn:hover{
+  color: #fff  !important;
+  background-color: #ff5e1f   !important;
+  border: none !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  font-size: larger !important;
+  -webkit-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+}
+
+.rn-nav-link {
+  color: #1f1f1f;
+  font-weight: 500;
+  text-decoration: none;
+}
+.rn-nav-link:hover {
+  color: #ff5e1f;
+  font-weight: 500;
+  text-decoration: none;
+}
+.rn-nav-link:active {
+  color: #ff5e1f;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pre-footer {
+  background-color: #ff5e1f;
+}
+
+.pre-footer-btn {
+  background-color: #fff;
+  padding: 15px;
+  padding-right: 60px;
+  padding-left: 60px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pre-footer-btn:hover {
+  background-color: #fff;
+  padding: 15px;
+  padding-right: 60px;
+  padding-left: 60px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+}
+
+.rn-footer{
+  background-color: #1f1f1f;
+}
+
+.logo-footer{
+  fill: #ffffff;
+}
+
+.text-footer{
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.boton-footer{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: larger;
+  margin-top: none   !important;
+}
+
+.color-naranja{
+  color: #ff5e1f;
+}
+
+.boton-footer:hover{
+  color: #ff5e1f;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.link-footer{
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.link-footer:hover{
+  color: #ff5e1f;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hr-w{
+  border-color: #5e5e5e;
+}
+
+/* estilos pagina principal */
+.lugarClima{
+  font-size: 20px;
+}
+.temperaturaClima{
+  font-size: 25px;
+}
+.divisas{
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px){ 
+  .lugarClima{
+    font-size: 15px;
+  }
+  .temperaturaClima{
+    font-size: 20px;
+  }
+  .divisas{
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 599px){ 
+  .lugarClima{
+    font-size: 10px;
+  }
+  .temperaturaClima{
+    font-size: 15px;
+  }
+  .divisas{
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 499px){ 
+  .lugarClima{
+    font-size: 10px;
+  }
+  .temperaturaClima{
+    font-size: 12px;
+  }
+  .divisas{
+    font-size: 9px;
+  }
+
+  .columnaClima{
+    padding: 0px !important;
+  }
+}

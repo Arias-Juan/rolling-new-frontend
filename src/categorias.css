@@ -1,0 +1,98 @@
+.bg-naranja{
+    background: linear-gradient(226deg, #ff5e1f, #300db1);
+    background-size: 400% 400%;
+
+    -webkit-animation: portada-animacion 16s ease infinite;
+    -moz-animation: portada-animacion 16s ease infinite;
+    animation: portada-animacion 16s ease infinite;
+
+    width: 100%;
+    height: 26rem;
+    margin-bottom: 400px;
+    position: relative;
+}
+
+
+@-webkit-keyframes portada-animacion {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-moz-keyframes portada-animacion {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@keyframes portada-animacion {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+
+.titulo{
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.formato-carousel{
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+
+.fc{
+    width: 70%;
+    left: 15%;
+    -webkit-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-carousel{
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.titulo-carousel:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.card-titulo{
+    color: #1f1f1f;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.card-titulo:hover{
+    color: #ff5e1f;
+}
+
+.card-texto{
+    color: black;
+    opacity: 80%;
+    font-weight: 500;
+}
+
+.card-texto:hover{
+    color: black;
+    opacity: 100%;
+    font-weight: 500;
+}
+
+.card-hover{
+    cursor: pointer;
+}
+
+.card-hover:hover{
+    -webkit-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-card{
+    font-weight: 800;
+    text-transform: uppercase;
+}
