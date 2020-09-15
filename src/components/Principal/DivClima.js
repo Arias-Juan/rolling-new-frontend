@@ -2,15 +2,15 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Spinner from './Spinner'
 
-const DivClima = ({ clima }) => {
-    if (clima.cod === 200) {
-        console.log(clima)
-    }
-
-    return (
-        <Container fluid>
-            <Row>
+const DivClima = ({ clima, loader }) => {
+    
+    console.log(loader)
+    const componenteCondicional = loader ? (
+        <Spinner></Spinner>
+      ) : (
+        <Row>
                 <Col xs={6} className="d-flex align-items-center">
                     <p className='m-0 lugarClima'>{clima.name}</p>
                 </Col>
@@ -23,6 +23,11 @@ const DivClima = ({ clima }) => {
 
                 </Col>
             </Row>
+      )
+
+    return (
+        <Container fluid>
+            {componenteCondicional}
         </Container>
     );
 };

@@ -13,7 +13,7 @@ const Inicio = () => {
     return (
         <section>
             <Container fluid>
-                <Row className="d-flex align-items-center">
+                <Row className="d-flex align-items-center justify-content-around">
                     <Col xs={4} className="columnaClima">
                         <ApiClima></ApiClima>
                     </Col>
@@ -30,7 +30,7 @@ const Inicio = () => {
                 <UltimasNoticias></UltimasNoticias>
             </div>
 
-            <BannerCovid className="container"></BannerCovid>
+            <BannerCovid></BannerCovid>
 
             <div className="p-3 my-3 mx-5">
                 <Container fluid>

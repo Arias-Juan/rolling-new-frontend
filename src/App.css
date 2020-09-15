@@ -155,3 +155,11 @@
     padding: 0px !important;
   }
 }
+
+.cardCategoria{
+  height: 200px;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: #ff5e1f !important;  
+}
