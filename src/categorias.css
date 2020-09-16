@@ -12,6 +12,21 @@
     position: relative;
 }
 
+.bg-naranja-sm{
+    background: linear-gradient(226deg, #ff5e1f, #300db1);
+    background-size: 400% 400%;
+
+    -webkit-animation: portada-animacion 16s ease infinite;
+    -moz-animation: portada-animacion 16s ease infinite;
+    animation: portada-animacion 16s ease infinite;
+
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 150px;
+    position: relative;
+}
+
 
 @-webkit-keyframes portada-animacion {
     0%{background-position:97% 0%}
@@ -49,9 +64,23 @@
     box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
 }
 
+.fc-sm{
+    width: 100%;
+    left: 0%;
+    -webkit-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+}
+
 .titulo-carousel{
     color: white;
     font-size: 4rem;
+    font-weight: 800;
+}
+
+.titulo-carousel-sm{
+    color: white;
+    font-size: 1.8rem;
     font-weight: 800;
 }
 

@@ -4,7 +4,13 @@ import VCard from "./common/VCard";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const UltimasNoticias = () => {
+const UltimasNoticias = (props) => {
+
+  // props.noticias.map((noticia) => {
+  //   console.log(noticia);
+  // });
+
+
   return (
     <Fragment>
       <Row>
