@@ -25,6 +25,7 @@ import ListaNoticias from "./components/administracion/ListaNoticias";
 import EditarNoticias from "./components/administracion/EditarNoticias";
 import Categorias from "./components/administracion/Categorias";
 import NuevaCategoria from "./components/administracion/NuevaCategoria";
+import DetalleNoticia from "./components/Layout/DetalleNoticia";
 
 function App() {
   //creamos un arreglo con las categorias
@@ -152,6 +153,9 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Login></Login>
+        </Route>
+        <Route exact path="/detalle">
+          <DetalleNoticia></DetalleNoticia>
         </Route>
         <Route exact path="*">
           <Error404></Error404>
