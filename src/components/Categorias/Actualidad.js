@@ -5,6 +5,12 @@ import Body from "./Common/Body";
 import PublicidadH from "../common/PublicidadH";
 
 const Actualidad = (props) => {
+  const noticiasActualidad = props.noticias.filter((itemNoticia) => {
+    return itemNoticia.categoria === "actualidad";
+  });
+
+  //console.log(noticiasActualidad);
+
   return (
     <div>
       <Banner titulo={props.categorias[0]}></Banner>
@@ -13,7 +19,7 @@ const Actualidad = (props) => {
         <PublicidadH></PublicidadH>
       </div>
       <hr></hr>
-      <Body></Body>
+      <Body noticias={noticiasActualidad}></Body>
     </div>
   );
 };

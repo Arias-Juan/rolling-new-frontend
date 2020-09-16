@@ -79,28 +79,28 @@ function App() {
           <Inicio noticias={noticias}></Inicio>
         </Route>
         <Route exact path="/categorias/actualidad">
-          <Actualidad categorias={categorias}></Actualidad>
+          <Actualidad categorias={categorias} noticias={noticias}></Actualidad>
         </Route>
         <Route exact path="/categorias/deporte">
-          <Deporte categorias={categorias}></Deporte>
+          <Deporte categorias={categorias} noticias={noticias}></Deporte>
         </Route>
         <Route exact path="/categorias/economia">
-          <Economia categorias={categorias}></Economia>
+          <Economia categorias={categorias} noticias={noticias}></Economia>
         </Route>
         <Route exact path="/categorias/espectaculo">
-          <Espectaculo categorias={categorias}></Espectaculo>
+          <Espectaculo categorias={categorias} noticias={noticias}></Espectaculo>
         </Route>
         <Route exact path="/categorias/fotografia">
-          <Fotografia categorias={categorias}></Fotografia>
+          <Fotografia categorias={categorias} noticias={noticias}></Fotografia>
         </Route>
         <Route exact path="/categorias/politica">
-          <Politica categorias={categorias}></Politica>
+          <Politica categorias={categorias} noticias={noticias}></Politica>
         </Route>
         <Route exact path="/categorias/salud">
-          <Salud categorias={categorias}></Salud>
+          <Salud categorias={categorias} noticias={noticias}></Salud>
         </Route>
         <Route exact path="/categorias/tecnologia">
-          <Tecnologia categorias={categorias}></Tecnologia>
+          <Tecnologia categorias={categorias} noticias={noticias}></Tecnologia>
         </Route>
         <Route exact path="/noticias/nueva">
           <NuevaNoticia

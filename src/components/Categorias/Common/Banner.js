@@ -5,6 +5,7 @@ import "../../../categorias.css";
 import imgPrueba from "../../../img/Pruebas/prueba-01-01.jpg";
 
 const Banner = (props) => {
+  
   return (
     <Fragment>
       <div className="bg-naranja py-3 d-none d-lg-block">

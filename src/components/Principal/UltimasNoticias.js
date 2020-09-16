@@ -6,9 +6,9 @@ import Col from "react-bootstrap/Col";
 
 const UltimasNoticias = (props) => {
 
-  props.noticias.map((noticia) => {
-    console.log(noticia);
-  });
+  // props.noticias.map((noticia) => {
+  //   console.log(noticia);
+  // });
 
 
   return (

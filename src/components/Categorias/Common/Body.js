@@ -11,18 +11,25 @@ import Row from "react-bootstrap/Row";
 import publicidad from "../../../img/Pruebas/publicidad-02.jpg";
 import "../../../categorias.css";
 
-const Body = () => {
+const Body = (props) => {
+
+  console.log(props.noticias)
+
   return (
     <Fragment>
       <Container fluid className="bg-light">
         <Container className="py-4">
           <Row>
             <Col sm={12} lg={8}>
-              <Cards></Cards>
-              <Cards></Cards>
-              <Cards></Cards>
-              <Cards></Cards>
-              <Cards></Cards>
+              {
+                props.noticias.map((itemNoticia) => (
+                  <Cards
+                    key={itemNoticia.id}
+                    noticias={itemNoticia}
+                  ></Cards>
+                  ))
+              }
+              
             </Col>
             <div className="d-none d-lg-block">
               <Col lg={3}>
