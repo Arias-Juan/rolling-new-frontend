@@ -54,9 +54,9 @@ function App() {
     try {
       // obtengo la lista de noticias
       const consulta = await fetch("http://localhost:4000/noticia");
-      console.log(consulta);
+      //console.log(consulta);
       const respuesta = await consulta.json();
-      console.log(respuesta);
+      //console.log(respuesta);
       if ((await consulta.status) !== 200) {
         Swal.fire({
           icon: "error",

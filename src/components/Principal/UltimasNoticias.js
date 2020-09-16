@@ -5,17 +5,23 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const UltimasNoticias = (props) => {
+
+  props.noticias.map((noticia) => {
+    console.log(noticia);
+  });
+
+
   return (
     <Fragment>
       <Row>
         <Col sm={12} md={6}>
-          <HCard ultimaNoticia={props.noticias[props.noticias.length -1]}></HCard>
+          <HCard></HCard>
         </Col>
         <Col sm={12} md={6}>
-        <h3 className="titulo-ppal mb-4">Noticias Recientes</h3>
-          <VCard noticias={props.noticias}></VCard>
-          <VCard noticias={props.noticias}></VCard>
-          <VCard noticias={props.noticias}></VCard>
+          <h3 className="titulo-ppal mb-4">Noticias Recientes</h3>
+          <VCard></VCard>
+          <VCard></VCard>
+          <VCard></VCard>
         </Col>
       </Row>
     </Fragment>

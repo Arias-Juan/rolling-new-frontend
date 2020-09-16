@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import "../../../categorias.css";
 import imgPrueba from "../../../img/Pruebas/prueba-01-01.jpg";
 
-const HCard = (props) => {
-  console.log(typeof props.ultimaNoticia);
+const HCard = () => {
 
 
 

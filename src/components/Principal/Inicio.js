@@ -1,4 +1,4 @@
-import React from "react";
+import React, { } from "react";
 import ApiMoneda from "./ApiMoneda";
 import UltimasNoticias from "./UltimasNoticias";
 import ApiClima from "./ApiClima";
@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Inicio = (props) => {
+
   return (
     <section>
       <div className="container-fluid pre-footer">
