@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-// import Row from "react-bootstrap/Row";
+// import Link from "react-bootstrap/Link";
 import { FaFacebook, FaTwitter } from 'react-icons/fa'
 import { SiGmail } from "react-icons/si";
 
@@ -17,13 +17,13 @@ const Login = () => {
   const handleSubmit = (e)=> {
     e.preventDefault();
     console.log("desde el boton enviar");
-
+    // validar datos 
 
   }
 
       return (
 
-      <Col xs={12} lg={5} className="mx-auto my-5" onSubmit={handleSubmit}>
+      <Col xs={12} lg={6} className="mx-auto my-5" >
         <Card className="border border-dark">
           <Card.Header className="bg-dark"><h5 className="text-light">Iniciar sesión</h5></Card.Header>
           <Card.Body>
@@ -39,25 +39,25 @@ const Login = () => {
             <h6 className="text-center my-5">
                 O con su correo electrónico y contraseña de Rolling New
             </h6>
-            <Form >
+            <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formBasicEmail">
-                <Form.Control  type="email" placeholder="Correo electrónico *" onChange={
+                <Form.Control  type="email" placeholder="Correo electrónico *"  onChange={
                   (e)=>{if(mailVerif.test(e.target.value)){
                     console.log("usuario correcto");
-                    e.target.style.border="2px solid green"
+                    e.target.className="form-control is-valid"
                   }else{
                     console.log("usuario incorrecto")
-                    e.target.style.border="2px solid red"
+                    e.target.className="form-control is-invalid"
                   }}} />
               </Form.Group>
               <Form.Group controlId="formBasicPassword">
                 <Form.Control type="password" placeholder="Contraseña *" onChange={(e) => {
                   if(passVerif.test(e.target.value)){
                     console.log("valido");
-                    e.target.style.border="2px solid green"
+                    e.target.className="form-control is-valid"
                   }else{
                     console.log("invalido");
-                    e.target.style.border="2px solid red"
+                    e.target.className="form-control is-invalid"
                   }
                 }} />
               </Form.Group>
