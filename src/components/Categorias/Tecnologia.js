@@ -4,6 +4,13 @@ import Body from "./Common/Body";
 import PublicidadH from "../common/PublicidadH";
 
 const Tecnologia = (props) => {
+
+  const noticiasTecnologia = props.noticias.filter((itemNoticia) => {
+    return itemNoticia.categoria === "tecnologia";
+  });
+
+  //console.log(noticiasTecnologia);
+
     return (
         <div>
         <Banner titulo={props.categorias[7]}></Banner>
@@ -12,7 +19,7 @@ const Tecnologia = (props) => {
           <PublicidadH></PublicidadH>
         </div>
         <hr></hr>
-        <Body></Body>
+        <Body noticias={noticiasTecnologia}></Body>
       </div>
     );
 };

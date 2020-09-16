@@ -39,6 +39,16 @@
       "autor": "hvhvhv",
       "fecha": "8888",
       "id": 14
+    },
+    {
+      "tituloNoticia": "Coronavirus Manifestacion",
+      "descripcionBreve": "descripcionbrevedescripcionbrevedescripcionbrevedescripcionbrevedescripcionbreve",
+      "descripcionDetallada": "descripcionlarga",
+      "imagenPrincipal": "https://i.ibb.co/2Z2jbCP/img-prueba-url.jpg",
+      "categoria": "actualidad",
+      "autor": "1A",
+      "fecha": "16/09/2020",
+      "id": 15
     }
   ]
 }
