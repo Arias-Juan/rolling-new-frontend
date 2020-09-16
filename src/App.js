@@ -76,7 +76,7 @@ function App() {
       <Header></Header>
       <Switch>
         <Route exact path="/">
-          <Inicio></Inicio>
+          <Inicio noticias={noticias}></Inicio>
         </Route>
         <Route exact path="/categorias/actualidad">
           <Actualidad categorias={categorias}></Actualidad>

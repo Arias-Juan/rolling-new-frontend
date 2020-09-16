@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 import "../../../categorias.css";
 import imgPrueba from "../../../img/Pruebas/prueba-01-01.jpg";
 
-const HCard = () => {
+const HCard = (props) => {
+  console.log(typeof props.ultimaNoticia);
+
+
+
+
   return (
     <Card className="card-hover">
       <Link className="text-decoration-none" exact={true} to="/*">
@@ -12,7 +17,7 @@ const HCard = () => {
         <Card.Body>
           <Card.Title>
             <Link exact={true} to="/*" className="card-titulo">
-              Titulo de la Noticia
+              Titulo
             </Link>
           </Card.Title>
           <Card.Text className="card-texto">

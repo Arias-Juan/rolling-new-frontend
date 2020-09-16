@@ -8,7 +8,7 @@ import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const Inicio = () => {
+const Inicio = (props) => {
   return (
     <section>
       <div className="container-fluid pre-footer">
@@ -25,7 +25,7 @@ const Inicio = () => {
       </div>
 
       <div className="p-3 my-3">
-        <UltimasNoticias></UltimasNoticias>
+        <UltimasNoticias noticias={props.noticias}></UltimasNoticias>
       </div>
 
       {/* <BannerCovid className="container"></BannerCovid> */}

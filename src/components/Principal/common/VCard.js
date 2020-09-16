@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../../../categorias.css";
 import imgPrueba from "../../../img/Pruebas/prueba-01-01.jpg";
 
-const VCard = () => {
+const VCard = (props) => {
   return (
     <div className="card-hover">
       <Link
