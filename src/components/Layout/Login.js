@@ -8,15 +8,22 @@ import { FaFacebook, FaTwitter } from 'react-icons/fa'
 import { SiGmail } from "react-icons/si";
 
 const Login = () => {
-  const [login, useLogin] = useState("");
-  const [pass, usePass] = useState("");
+  const [login, setLogin] = useState({});
+  const [pass, setPass] = useState("");
 
   const mailVerif = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const passVerif = /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/;
+
+  const handleSubmit = (e)=> {
+    e.preventDefault();
+    console.log("desde el boton enviar");
+
+
+  }
+
       return (
 
-    // <Row>
-      <Col xs={12} lg={5} className="mx-auto my-5">
+      <Col xs={12} lg={5} className="mx-auto my-5" onSubmit={handleSubmit}>
         <Card className="border border-dark">
           <Card.Header className="bg-dark"><h5 className="text-light">Iniciar sesión</h5></Card.Header>
           <Card.Body>
@@ -35,7 +42,6 @@ const Login = () => {
             <Form >
               <Form.Group controlId="formBasicEmail">
                 <Form.Control  type="email" placeholder="Correo electrónico *" onChange={
-                  
                   (e)=>{if(mailVerif.test(e.target.value)){
                     console.log("usuario correcto");
                     e.target.style.border="2px solid green"
@@ -72,7 +78,6 @@ const Login = () => {
           </Card.Body>
         </Card>
       </Col>
-    // </Row>
   );
 };
 
