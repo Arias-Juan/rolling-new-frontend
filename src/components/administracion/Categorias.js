@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
+import NavbarAdmin from "./common/NavbarAdmin";
 
 const Categorias = (props) => {
   const eliminarCategoria = (id) => {
@@ -62,6 +63,7 @@ const Categorias = (props) => {
   };
   return (
     <article>
+      <NavbarAdmin></NavbarAdmin>
       <Accordion>
         <Card>
           <Accordion.Toggle
@@ -74,7 +76,7 @@ const Categorias = (props) => {
               <div className="col-8">
                 <h5>
                   <span className="font-weight-bold">
-                    {props.categoriaItem.agregarCategoria}:
+                    {props.categoriaItem.agregarCategoria}
                   </span>
                   {props.categoriaItem.descripcionCategoria}
                 </h5>

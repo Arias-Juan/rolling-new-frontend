@@ -2,7 +2,7 @@ import React from "react";
 import "../../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "react-bootstrap/Nav";
-import NavLink from "react-bootstrap/NavLink";
+import { Link } from "react-router-dom";
 
 const NavbarAdmin = () => {
   return (
@@ -10,34 +10,34 @@ const NavbarAdmin = () => {
       <div className="py-3 container-fluid bg-light text-light">
         <div className="container">
           <Nav className="text-center">
-            <NavLink
+            <Link
               exact={true}
-              to="/*"
+              to="/noticias"
               className="rn-nav-link mx-2"
             >
               Lista de Noticias
-            </NavLink>
-            <NavLink
+            </Link>
+            <Link
               exact={true}
-              to="/*"
+              to="/noticias/nueva"
               className="rn-nav-link mx-2"
             >
               Nueva Noticia
-            </NavLink>
-            <NavLink
+            </Link>
+            <Link
               exact={true}
-              to="/*"
+              to="/administracion/categoria"
               className="rn-nav-link mx-2"
             >
               Lista de Categorias
-            </NavLink>
-            <NavLink
+            </Link>
+            <Link
               exact={true}
-              to="/*"
+              to="/administracion/nuevacategoria"
               className="rn-nav-link mx-2"
             >
-              Otro boton (borrar si no se usa)
-            </NavLink>
+              Nueva Categoria
+            </Link>
           </Nav>
         </div>
       </div>
