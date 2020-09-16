@@ -8,11 +8,11 @@ const UltimasNoticias = () => {
   return (
     <Fragment>
       <Row>
-        <Col sm={12} md={6}>
+        <Col sm={12} lg={6} className="pb-4">
           <HCard></HCard>
         </Col>
-        <Col sm={12} md={6}>
-        <h3 className="titulo-ppal mb-4">Noticias Recientes</h3>
+        <Col sm={12} lg={6}>
+        <h3 className="titulo-noticiasRecientes mb-4">Noticias Recientes</h3>
           <VCard></VCard>
           <VCard></VCard>
           <VCard></VCard>

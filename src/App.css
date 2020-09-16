@@ -16,22 +16,22 @@
   background-color: #ff5e1f;
 }
 
-.btn-rn{
-  color: #fff  !important;
-  background-color: #ff5e1f   !important;
+.btn-rn {
+  color: #fff !important;
+  background-color: #ff5e1f !important;
 }
 
-.btn-rn{
-  color: #fff  !important;
-  background-color: #ff5e1f   !important;
+.btn-rn {
+  color: #fff !important;
+  background-color: #ff5e1f !important;
   border: none !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
   font-size: larger !important;
 }
-.btn-rn:hover{
-  color: #fff  !important;
-  background-color: #ff5e1f   !important;
+.btn-rn:hover {
+  color: #fff !important;
+  background-color: #ff5e1f !important;
   border: none !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
@@ -86,38 +86,38 @@
   box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
 }
 
-.rn-footer{
+.rn-footer {
   background-color: #1f1f1f;
 }
 
-.logo-footer{
+.logo-footer {
   fill: #ffffff;
 }
 
-.text-footer{
+.text-footer {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.boton-footer{
+.boton-footer {
   color: #ffffff;
   text-decoration: none;
   font-size: larger;
-  margin-top: none   !important;
+  margin-top: none !important;
 }
 
-.color-naranja{
+.color-naranja {
   color: #ff5e1f;
 }
 
-.boton-footer:hover{
+.boton-footer:hover {
   color: #ff5e1f;
   text-decoration: none;
   font-size: larger;
 }
 
-.link-footer{
+.link-footer {
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
@@ -125,74 +125,92 @@
   cursor: pointer;
 }
 
-.link-footer:hover{
+.link-footer:hover {
   color: #ff5e1f;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.hr-w{
+.hr-w {
   border-color: #5e5e5e;
 }
 
 /* estilos pagina principal */
-.lugarClima{
-  font-size: 20px;
-}
-.temperaturaClima{
-  font-size: 25px;
-}
-.divisas{
+.divisas {
   font-size: 20px;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px){ 
-  .lugarClima{
-    font-size: 15px;
-  }
-  .temperaturaClima{
-    font-size: 20px;
-  }
-  .divisas{
-    font-size: 15px;
-  }
+.titulo-noticiasRecientes {
+  font-weight: 900;
+  font-size: 3.1rem;
 }
-@media only screen and (min-width: 500px) and (max-width: 599px){ 
-  .lugarClima{
-    font-size: 10px;
+
+.titulo-categoria {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff5e1f !important;
+}
+
+
+div .cardCategoria{
+  padding-bottom: 100% !important;
+}
+
+.carousel-indicators {
+  margin-bottom: 0px !important;
+}
+
+/* Dispositivos medianos */
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  .divisas {
+    font-size: 17px;
   }
-  .temperaturaClima{
-    font-size: 15px;
+
+  .titulo-noticiasRecientes {
+    font-weight: 800;
+    font-size: 2.8rem;
   }
-  .divisas{
-    font-size: 10px;
+
+  .titulo-categoria {
+    font-weight: 800;
+    font-size: 2.5rem;
   }
 }
 
-@media only screen and (max-width: 499px){ 
-  .lugarClima{
-    font-size: 10px;
-  }
-  .temperaturaClima{
-    font-size: 12px;
-  }
-  .divisas{
-    font-size: 9px;
-  }
-
-  .columnaClima{
+/* Dispositivos pequenos*/
+@media only screen and (max-width: 499px) {
+  .divisas {
+    font-size: 17px;
     padding: 0px !important;
   }
-}
 
-.cardCategoria{
-  height: 200px;
-}
+  .titulo-noticiasRecientes {
+    font-weight: 800;
+    font-size: 2rem;
+  }
 
-.swiper-button-next, .swiper-button-prev{
-  color: #ff5e1f !important;  
-}
+  .titulo-categoria {
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
 
-.carousel-indicators{
-  margin-bottom: 0px !important;
+  .carousel-indicators li {
+    display: none;
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .descripcionNoticiaCategoria{
+    display:none;
+  }
+
 }

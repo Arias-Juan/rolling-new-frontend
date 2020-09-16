@@ -4,18 +4,19 @@ import UltimasNoticias from './UltimasNoticias'
 import ApiClima from './ApiClima';
 import NoticiasCategorias from './NoticiasCategorias';
 import BannerCovid from './BannerCovid';
+import Patrocinadores from './Patrocinadores'
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 
 const Inicio = () => {
-    return (
-        <section>
-            <div className="container-fluid pre-footer">
+  return (
+    <section>
+      <div className="container-fluid pre-footer">
         <Container>
           <Row>
-            <Col className="d-none d-lg-block">
+            <Col className="d-none d-md-block">
               <ApiClima></ApiClima>
             </Col>
             <Col>
@@ -29,22 +30,23 @@ const Inicio = () => {
         <UltimasNoticias></UltimasNoticias>
       </div>
 
-            <BannerCovid></BannerCovid>
+      <BannerCovid></BannerCovid>
 
-            <div className="p-3 my-3 mx-5">
-                <Container fluid>
-                    <Row className="d-flex justify-content-around">
-                        <Col md={8}>
-                            <NoticiasCategorias className="shadow border rounded p-3"></NoticiasCategorias>
-                        </Col>
-                        <Col md={3}>
-                            <h1>PUBLICIDAD</h1>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-        </section>
-    );
+      <div className="p-3 my-3">
+        <Container fluid>
+          <Row className="d-flex justify-content-around">
+            <Col xs={8} className="p-0">
+              <NoticiasCategorias></NoticiasCategorias>
+              <NoticiasCategorias></NoticiasCategorias>
+            </Col>
+            <Col xs={3} lg={2} className="p-0">
+              <Patrocinadores></Patrocinadores>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </section>
+  );
 
 };
 
