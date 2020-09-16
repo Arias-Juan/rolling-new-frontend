@@ -184,3 +184,17 @@
     padding: 0px !important;
   }
 }
+
+/* -------login------ */
+.iconFB{
+  color: blue;
+}
+.iconGM{
+  color: #ff5e1f;
+}
+.iconTW{
+  color:aqua;
+}
+.lineaHR{
+  background-color:rgb(0, 0, 0);
+}
