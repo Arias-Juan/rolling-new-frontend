@@ -155,7 +155,7 @@ const Header = () => {
                 id="basic-nav-dropdown"
                 className="rn-nav-link"
               >
-                <NavDropdown.Item href="#action/3.1">Ingresar</NavDropdown.Item>
+                <NavDropdown.Item href="/login">Ingresar</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Registrarse
                 </NavDropdown.Item>
