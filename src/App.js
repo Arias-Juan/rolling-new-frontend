@@ -43,7 +43,7 @@ function App() {
   ];
   //inicializamos el state de las categorias
   const [categorias, setCategorias] = useState(_categorias);
-  console.log(setCategorias);
+  //console.log(setCategorias);
 
   const [noticias, setNoticias] = useState([]);
   const [recargarNoticias, setRecargarNoticias] = useState(true);
@@ -85,9 +85,9 @@ function App() {
     try {
       // obtengo la lista de noticias
       const consultar = await fetch("http://localhost:4000/categoria");
-      console.log(consultar);
+      //console.log(consultar);
       const respuestas = await consultar.json();
-      console.log(respuestas);
+      //console.log(respuestas);
       if ((await consultar.status) !== 200) {
         Swal.fire({
           icon: "error",
@@ -98,7 +98,7 @@ function App() {
       // guardo en el state
       setcategoriaNuevas(respuestas);
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
 
@@ -107,7 +107,7 @@ function App() {
       <Header></Header>
       <Switch>
         <Route exact path="/">
-          <Inicio noticias={noticias}></Inicio>
+          <Inicio noticias={noticias} categoriaNuevas={categoriaNuevas}></Inicio>
         </Route>
         <Route exact path="/categorias/actualidad">
           <Actualidad categorias={categorias} noticias={noticias}></Actualidad>

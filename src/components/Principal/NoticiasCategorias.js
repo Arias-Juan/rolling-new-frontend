@@ -11,11 +11,21 @@ import { Link } from "react-router-dom";
 
 SwiperCore.use([Navigation, A11y, EffectFade]);
 
-const NoticiasCategorias = () => {
+const NoticiasCategorias = (props) => {
+    //console.log(props.noticias) //me devuelve todas las noticias del sitio
+    
+
+    //console.log(props.noticiasSwiper) //me devuelve un arreglo con las noticias que aparecen marcadas para portada de categoria, sin importar la categoria
+
+    /*const noticias = props.noticiasSwiper.filter((itemNoticia) => {
+        return (itemNoticia.categoria) === itemNoticia.categoria
+    })
+    console.log(noticias); */
+
     return (
         <div className="mb-3">
             <Link exact={true} to="/*" className="text-decoration-none">
-                <h4 className="titulo-categoria card-titulo">Categoria</h4>
+                <h4 className="titulo-categoria card-titulo">{props.itemCategoria.agregarCategoria}</h4>
             </Link>
             <hr className="bg-dark"></hr>
 
@@ -23,8 +33,8 @@ const NoticiasCategorias = () => {
                 spaceBetween={20}
                 slidesPerView={3}
                 navigation
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                //onSwiper={(swiper) => console.log(swiper)}
+                //onSlideChange={() => console.log('slide change')}
                 loop={true}
                 breakpoints={{
                     //cuando el  ancho de la ventana es mayor o igual que 280
@@ -64,19 +74,12 @@ const NoticiasCategorias = () => {
                     }
                 }}
             >
-                {/* aca deberia ir una funcion map */}
-                <SwiperSlide>
-                    <CardCategoria></CardCategoria>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardCategoria></CardCategoria>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardCategoria></CardCategoria>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardCategoria></CardCategoria>
-                </SwiperSlide>
+                {/* {props.categoriaNuevas.map((itemCategoria) => 
+                <NoticiasCategorias key={itemCategoria.id} itemCategoria={itemCategoria} noticias={props.noticias} noticiasSwiper={noticiasSwiperCategorias}>
+              </NoticiasCategorias>)} */}
+                {props.noticiasSwiper.map((divNoticia) => (
+                <SwiperSlide><CardCategoria key={divNoticia.id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
+                
             </Swiper>
         </div>
     );

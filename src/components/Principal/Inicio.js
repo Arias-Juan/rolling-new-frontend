@@ -11,10 +11,16 @@ import Col from 'react-bootstrap/Col'
 
 
 const Inicio = (props) => {
+  
   const portada = props.noticias.filter((itemNoticia) => {
     return (itemNoticia.principalPortada === "true");
   });
 
+  const noticiasSwiperCategorias = props.noticias.filter((itemNoticia) => {
+    return (itemNoticia.principalCategoria === "true");
+  });
+  console.log(noticiasSwiperCategorias)
+  
   return (
     <section>
       <div className="container-fluid pre-footer">
@@ -40,8 +46,8 @@ const Inicio = (props) => {
         <Container fluid>
           <Row className="d-flex justify-content-around">
             <Col xs={8} className="p-0">
-              <NoticiasCategorias></NoticiasCategorias>
-              <NoticiasCategorias></NoticiasCategorias>
+              {props.categoriaNuevas.map((itemCategoria) => <NoticiasCategorias key={itemCategoria.id} itemCategoria={itemCategoria} noticias={props.noticias} noticiasSwiper={noticiasSwiperCategorias}>
+              </NoticiasCategorias>)}
             </Col>
             <Col xs={3} lg={2} className="p-0">
               <Patrocinadores></Patrocinadores>

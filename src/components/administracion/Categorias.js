@@ -63,42 +63,42 @@ const Categorias = (props) => {
   return (
 
     <article>
-      
-        <ListGroup.Item className="d-flex justify-content-between">
-         <div>
-           <h5>
-              <span className="font-weight-bold">
-                {props.categoriaItem.agregarCategoria}: {}
-              </span>
-              {props.categoriaItem.descripcionCategoria}
-            </h5>
-       </div>
-            <div>
-              <Link
-              className="btn btn-success mr-2"
-              size="sm"
-              to={`/administracion/editarCategoria/${props.categoriaItem.id}`}
-            >
-              <FontAwesomeIcon
-                icon={faEdit}
-                
-              ></FontAwesomeIcon>
-                
-                </Link>
-            <Button
-              className="btn btn-danger"
-              type="button"
-              size="sm"
-              onClick={() => eliminarCategoria(props.categoriaItem.id)}
-            >
-              <FontAwesomeIcon
-                icon={faTrash}
-               size="50"
-              ></FontAwesomeIcon>
-                  
-                </Button></div>
-            
-        </ListGroup.Item>
+
+      <ListGroup.Item className="d-flex justify-content-between">
+        <div>
+          <h5>
+            <span className="font-weight-bold">
+              {props.categoriaItem.agregarCategoria}: {}
+            </span>
+            {props.categoriaItem.descripcionCategoria}
+          </h5>
+        </div>
+        <div>
+          <Link
+            className="btn btn-success mr-2"
+            size="sm"
+            to={`/administracion/editarCategoria/${props.categoriaItem.id}`}
+          >
+            <FontAwesomeIcon
+              icon={faEdit}
+
+            ></FontAwesomeIcon>
+
+          </Link>
+          <Button
+            className="btn btn-danger"
+            type="button"
+            size="sm"
+            onClick={() => eliminarCategoria(props.categoriaItem.id)}
+          >
+            <FontAwesomeIcon
+              icon={faTrash}
+              size="50"
+            ></FontAwesomeIcon>
+
+          </Button></div>
+
+      </ListGroup.Item>
     </article>
   );
 };
