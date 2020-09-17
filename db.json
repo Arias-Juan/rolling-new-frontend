@@ -53,16 +53,28 @@
       "id": 15
     },
     {
-      "tituloNoticia": "Dolar ahorro aumenta",
-      "descripcionBreve": "descripcionbrevedescripcionbrevedescripcionbrevedescripcionbrevedescripcionbreve",
-      "descripcionDetallada": "jnlkijouhijnkljiuhbkjnlkjiouhknjlkijunklmjunk",
-      "imagenPrincipal": "https://i.ibb.co/2Z2jbCP/img-prueba-url.jpg",
+      "tituloNoticia": "Dolar ahorro aumenta un 30%",
+      "descripcionBreve": "descripcionbrevedescripcionbrevedescripcionbrevedescripcionbrevedescripcioabreve",
+      "descripcionDetallada": "jnlkijouhijnkljiuhbkjnlkjiouhknjlkijunklmjunka",
+      "imagenPrincipal": "https://i.ibb.co/kD7PzyV/segunda-prueba.jpg",
       "categoria": "economia",
-      "autor": "Lucas",
+      "autor": "Lucass",
       "principalPortada": "true",
       "principalCategoria": "true",
       "fecha": "16/09/2020",
       "id": 16
+    },
+    {
+      "tituloNoticia": "¿Cómo pesificar servicios para que no ingresen al cupo?",
+      "descripcionBreve": "Se puede elegir la opción en el menú de la aplicación, contactar a atención al cliente o a la entidad financiera.",
+      "descripcionDetallada": "Apartir de las nuevas medidas del Banco Central que apuntan a controlar la sangría de dólares de sus reservas, se multiplicaron las dudas sobre los alcances de los nuevos controles. En particular, las que refieren al alcance de las imposiciones sobre los servicios de streaming como Netflix o Spotify. ¿Se pagan en pesos o en dólares? la pregunta tiene dos respuestas posibles y pueden variar en meses diferentes para el mismo usuario: en dólares o en pesos.  En principio, ambos servicios se pueden pesificar por completo, como ocurre con otras plataformas a las que se puede acceder desde la Argentina. Amazon Prime, por ejemplo.",
+      "imagenPrincipal": "https://i.ibb.co/kD7PzyV/segunda-prueba.jpg",
+      "categoria": "economia",
+      "autor": "Lucas",
+      "principalPortada": "true",
+      "principalCategoria": "true",
+      "fecha": "17/09/2020",
+      "id": 17
     }
   ]
 }

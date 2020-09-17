@@ -6,22 +6,15 @@ import Col from "react-bootstrap/Col";
 
 const UltimasNoticias = (props) => {
 
-  // props.noticias.map((noticia) => {
-  //   console.log(noticia);
-  // });
-
-
   return (
     <Fragment>
       <Row>
         <Col sm={12} lg={6} className="pb-4">
-          <HCard></HCard>
+          <HCard noticias={props.noticias}></HCard>
         </Col>
         <Col sm={12} lg={6}>
         <h3 className="titulo-noticiasRecientes mb-4">Noticias Recientes</h3>
-          <VCard></VCard>
-          <VCard></VCard>
-          <VCard></VCard>
+          <VCard noticias={props.noticias}></VCard>
         </Col>
       </Row>
     </Fragment>
