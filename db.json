@@ -1,16 +1,6 @@
 {
   "noticia": [
     {
-      "tituloNoticia": "sasas",
-      "descripcionBreve": "aaaa",
-      "descripcionDetallada": "qqqq",
-      "imagenPrincipal": "aaaaa",
-      "categoria": "tecnologia",
-      "autor": "lll",
-      "fecha": "66666",
-      "id": 11
-    },
-    {
       "tituloNoticia": "boca campeon del mundo",
       "descripcionBreve": "boca",
       "descripcionDetallada": "dadsdadad",
@@ -61,6 +51,48 @@
       "principalCategoria": "true",
       "fecha": "16/09/2020",
       "id": 16
+    }
+  ],
+  "categoria": [
+    {
+      "agregarCategoria": "Actualidad",
+      "descripcionCategoria": "seccion encargada de todas las noticias de actualidad",
+      "id": 1
+    },
+    {
+      "agregarCategoria": "Espectaculos",
+      "descripcionCategoria": "seccion de arte, música, cine, TV  y teatro ",
+      "id": 2
+    },
+    {
+      "agregarCategoria": "Tecnologia",
+      "descripcionCategoria": "seccion de informatica",
+      "id": 3
+    },
+    {
+      "agregarCategoria": "Politica",
+      "descripcionCategoria": "noticias politicas",
+      "id": 4
+    },
+    {
+      "agregarCategoria": "Economia",
+      "descripcionCategoria": "noticias economia",
+      "id": 5
+    },
+    {
+      "agregarCategoria": "Deportes",
+      "descripcionCategoria": "noticias de deportes",
+      "id": 6
+    },
+    {
+      "agregarCategoria": "Salud",
+      "descripcionCategoria": "noticias de salud",
+      "id": 7
+    },
+    {
+      "agregarCategoria": "Fotografia",
+      "descripcionCategoria": "noticias de fotografias",
+      "id": 8
     }
   ]
 }

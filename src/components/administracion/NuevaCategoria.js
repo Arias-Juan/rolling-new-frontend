@@ -43,8 +43,8 @@ const NuevaCategoria = (props) => {
       // si todo salio bien
       if (resultado.status === 201) {
         Swal.fire(
-          "Noticia agregada",
-          "La noticia se agrego correctamente",
+          "Categoria agregada",
+          "La Categoria se agrego correctamente",
           "success"
         );
       } else {
