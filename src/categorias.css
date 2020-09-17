@@ -76,6 +76,7 @@
     color: white;
     font-size: 4rem;
     font-weight: 800;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.52);
 }
 
 .titulo-carousel-sm{

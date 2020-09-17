@@ -9,11 +9,15 @@ const Economia = (props) => {
     return itemNoticia.categoria === "economia";
   });
 
+  const portada = props.noticias.filter((itemNoticia) => {
+    return (itemNoticia.principalCategoria === "true" && itemNoticia.categoria === "economia");
+  });
+
   //console.log(noticiasEconomia);
 
     return (
         <div>
-        <Banner titulo={props.categorias[2]}></Banner>
+        <Banner titulo={props.categorias[2]} noticias={portada}></Banner>
         <hr></hr>
         <div className="container-fluid">
           <PublicidadH></PublicidadH>
