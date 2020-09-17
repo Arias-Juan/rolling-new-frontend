@@ -49,6 +49,18 @@
       "autor": "1A",
       "fecha": "16/09/2020",
       "id": 15
+    },
+    {
+      "tituloNoticia": "Dolar ahorro aumenta",
+      "descripcionBreve": "descripcionbrevedescripcionbrevedescripcionbrevedescripcionbrevedescripcionbreve",
+      "descripcionDetallada": "jnlkijouhijnkljiuhbkjnlkjiouhknjlkijunklmjunk",
+      "imagenPrincipal": "https://i.ibb.co/2Z2jbCP/img-prueba-url.jpg",
+      "categoria": "economia",
+      "autor": "Lucas",
+      "principalPortada": "true",
+      "principalCategoria": "true",
+      "fecha": "16/09/2020",
+      "id": 16
     }
   ]
 }
