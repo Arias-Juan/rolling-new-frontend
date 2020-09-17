@@ -2,7 +2,6 @@ import React from "react";
 //import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import "../../../categorias.css";
-import imgPrueba from "../../../img/Pruebas/prueba-01-01.jpg";
 
 const VCard = (props) => {
   return (
