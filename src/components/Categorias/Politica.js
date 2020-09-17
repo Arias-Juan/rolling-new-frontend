@@ -9,11 +9,13 @@ const Politica = (props) => {
     return itemNoticia.categoria === "politica";
   });
 
-  //console.log(noticiasPolitica);
+  const portada = props.noticias.filter((itemNoticia) => {
+    return (itemNoticia.principalCategoria === "true" && itemNoticia.categoria === "politica");
+  });
 
     return (
         <div>
-        <Banner titulo={props.categorias[5]}></Banner>
+        <Banner titulo={props.categorias[5]} noticias={portada}></Banner>
         <hr></hr>
         <div className="container-fluid">
           <PublicidadH></PublicidadH>

@@ -9,11 +9,13 @@ const Salud = (props) => {
     return itemNoticia.categoria === "salud";
   });
 
-  //console.log(noticiasSalud);
+  const portada = props.noticias.filter((itemNoticia) => {
+    return (itemNoticia.principalCategoria === "true" && itemNoticia.categoria === "salud");
+  });
 
     return (
         <div>
-        <Banner titulo={props.categorias[6]}></Banner>
+        <Banner titulo={props.categorias[6]} noticias={portada}></Banner>
         <hr></hr>
         <div className="container-fluid">
           <PublicidadH></PublicidadH>

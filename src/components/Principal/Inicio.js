@@ -11,6 +11,9 @@ import Col from 'react-bootstrap/Col'
 
 
 const Inicio = (props) => {
+  const portada = props.noticias.filter((itemNoticia) => {
+    return (itemNoticia.principalPortada === "true");
+  });
 
   return (
     <section>
@@ -28,7 +31,7 @@ const Inicio = (props) => {
       </div>
 
       <div className="p-3 my-3">
-        <UltimasNoticias noticias={props.noticias}></UltimasNoticias>
+        <UltimasNoticias noticias={portada}></UltimasNoticias>
       </div>
 
       <BannerCovid></BannerCovid>

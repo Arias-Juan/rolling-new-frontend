@@ -9,11 +9,15 @@ const Tecnologia = (props) => {
     return itemNoticia.categoria === "tecnologia";
   });
 
+  const portada = props.noticias.filter((itemNoticia) => {
+    return (itemNoticia.principalCategoria === "true" && itemNoticia.categoria === "tecnologia");
+  });
+
   //console.log(noticiasTecnologia);
 
     return (
         <div>
-        <Banner titulo={props.categorias[7]}></Banner>
+        <Banner titulo={props.categorias[7]} noticias={portada}></Banner>
         <hr></hr>
         <div className="container-fluid">
           <PublicidadH></PublicidadH>
