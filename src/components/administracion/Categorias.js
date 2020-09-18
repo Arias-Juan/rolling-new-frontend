@@ -5,9 +5,8 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
-import Accordion from "react-bootstrap/Accordion";
-import Card from "react-bootstrap/Card";
-import NavbarAdmin from "./common/NavbarAdmin";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const Categorias = (props) => {
   const eliminarCategoria = (id) => {
@@ -39,8 +38,8 @@ const Categorias = (props) => {
           if (resultado.status === 200) {
             props.setRecargarCategoria(true);
             Swal.fire(
-              "Noticia eliminada",
-              "Su noticia fue eliminada correctamente",
+              "Categoria eliminada",
+              "Su categoria fue eliminada correctamente",
               "success"
             );
           } else {
@@ -62,56 +61,44 @@ const Categorias = (props) => {
     });
   };
   return (
-    <article>
-      <NavbarAdmin></NavbarAdmin>
-      <Accordion>
-        <Card>
-          <Accordion.Toggle
-            as={Card}
-            variant="link"
-            className="w-100"
-            eventKey="0"
-          >
-            <ListGroup.Item className="d-flex justify-content-between">
-              <div className="col-8">
-                <h5>
-                  <span className="font-weight-bold">
-                    {props.categoriaItem.agregarCategoria}
-                  </span>
-                  {props.categoriaItem.descripcionCategoria}
-                </h5>
-              </div>
 
-              <div>
-                <Link
-                  className="btn btn-success mr-2"
-                  to={`/administracion/editarCategoria/${props.categoriaItem.id}`}
-                >
-                  <FontAwesomeIcon
-                    icon={faEdit}
-                    className="mr-2"
-                  ></FontAwesomeIcon>
-                  Editar
-                </Link>
-                <Button
-                  className="btn btn-danger"
-                  type="button"
-                  onClick={() => eliminarCategoria(props.categoriaItem.id)}
-                >
-                  <FontAwesomeIcon
-                    icon={faTrash}
-                    className="mr-2"
-                  ></FontAwesomeIcon>
-                  Eliminar
-                </Button>
-              </div>
-            </ListGroup.Item>
-          </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>aca va las noticias</Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+    <article>
+
+      <ListGroup.Item className="d-flex justify-content-between">
+        <div>
+          <h5>
+            <span className="font-weight-bold">
+              {props.categoriaItem.agregarCategoria}: {}
+            </span>
+            {props.categoriaItem.descripcionCategoria}
+          </h5>
+        </div>
+        <div>
+          <Link
+            className="btn btn-success mr-2"
+            size="sm"
+            to={`/administracion/editarCategoria/${props.categoriaItem.id}`}
+          >
+            <FontAwesomeIcon
+              icon={faEdit}
+
+            ></FontAwesomeIcon>
+
+          </Link>
+          <Button
+            className="btn btn-danger"
+            type="button"
+            size="sm"
+            onClick={() => eliminarCategoria(props.categoriaItem.id)}
+          >
+            <FontAwesomeIcon
+              icon={faTrash}
+              size="50"
+            ></FontAwesomeIcon>
+
+          </Button></div>
+
+      </ListGroup.Item>
     </article>
   );
 };

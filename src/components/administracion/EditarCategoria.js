@@ -49,8 +49,8 @@ const EditarCategoria = (props) => {
           //efectivamente se modifico el producto
           props.setRecargarCategorias(true);
           Swal.fire(
-            'noticia modificada',
-            'La noticia fue modificada correctamente',
+            'Categoria modificada',
+            'La Categoria fue modificada correctamente',
             'success'
           )
           props.history.push("/administracion/categoria");

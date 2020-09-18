@@ -15,7 +15,7 @@ const ApiClima = () => {
         //consultar latitud y longitud
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(async (position) => {
-                console.log(position)
+                //console.log(position)
                 let lat = position.coords.latitude;
                 let lon = position.coords.longitude;
 

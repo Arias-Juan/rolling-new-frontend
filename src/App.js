@@ -23,9 +23,12 @@ import PrincipalAdmin from "./components/administracion/common/PrincipalAdmin";
 import NuevaNoticia from "./components/administracion/NuevaNoticia";
 import ListaNoticias from "./components/administracion/ListaNoticias";
 import EditarNoticias from "./components/administracion/EditarNoticias";
-import Categorias from "./components/administracion/Categorias";
+// import Categorias from "./components/administracion/Categorias";
 import NuevaCategoria from "./components/administracion/NuevaCategoria";
 import DetalleNoticia from "./components/Layout/DetalleNoticia";
+import ListaCategoria from "./components/administracion/ListaCategoria";
+import EditarCategoria from "./components/administracion/EditarCategoria";
+import Registro from "./components/Layout/Registro";
 
 function App() {
   //creamos un arreglo con las categorias
@@ -41,10 +44,12 @@ function App() {
   ];
   //inicializamos el state de las categorias
   const [categorias, setCategorias] = useState(_categorias);
-  console.log(setCategorias);
+  //console.log(setCategorias);
 
   const [noticias, setNoticias] = useState([]);
   const [recargarNoticias, setRecargarNoticias] = useState(true);
+  const [recargarCategoria, setRecargarCategoria] = useState(true);
+  const [categoriaNuevas, setcategoriaNuevas] = useState([]);
 
   useEffect(() => {
     consultarAPI();
@@ -71,13 +76,39 @@ function App() {
       console.log(error);
     }
   };
+  // consulta a API categorias
+  useEffect(() => {
+    consultarCategoriaAPI();
+    setRecargarCategoria(false)
+  }, [recargarCategoria]);
+
+  const consultarCategoriaAPI = async () => {
+    try {
+      // obtengo la lista de noticias
+      const consultar = await fetch("http://localhost:4000/categoria");
+      //console.log(consultar);
+      const respuestas = await consultar.json();
+      //console.log(respuestas);
+      if ((await consultar.status) !== 200) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Ocurrio un error, intentelo nuevamente",
+        });
+      }
+      // guardo en el state
+      setcategoriaNuevas(respuestas);
+    } catch (error) {
+      //console.log(error);
+    }
+  };
 
   return (
     <Router>
       <Header></Header>
       <Switch>
         <Route exact path="/">
-          <Inicio noticias={noticias}></Inicio>
+          <Inicio noticias={noticias} categoriaNuevas={categoriaNuevas}></Inicio>
         </Route>
         <Route exact path="/categorias/actualidad">
           <Actualidad categorias={categorias} noticias={noticias}></Actualidad>
@@ -140,10 +171,30 @@ function App() {
           <PrincipalAdmin></PrincipalAdmin>
         </Route>
         <Route exact path="/administracion/categoria">
-          <Categorias></Categorias>
+          <ListaCategoria categoriaNuevas={categoriaNuevas} setRecargarCategoria={setRecargarCategoria}></ListaCategoria>
         </Route>
         <Route exact path="/administracion/nuevacategoria">
-          <NuevaCategoria></NuevaCategoria>
+          <NuevaCategoria setRecargarCategoria={setRecargarCategoria}></NuevaCategoria>
+        </Route>
+        <Route exact path="/administracion/editarCategoria/:id"
+          render={(props) => {
+            // codigo a ejecutar antes de renderizar el componente
+            // obtengo el id de la lista
+            const idCategoria = parseInt(props.match.params.id);
+            console.log(idCategoria);
+            // buscar el producto que coincida con el id
+            const categoriaSelecionada = categoriaNuevas.find(
+              (ccategoria) => ccategoria.id === idCategoria
+            );
+            console.log(categoriaSelecionada);
+            // muestro el componente editarNoticias
+            return (
+              <EditarCategoria
+                Categoria={categoriaSelecionada}
+                setRecargarCategorias={setRecargarCategoria}
+              ></EditarCategoria>
+            );
+          }}>
         </Route>
         <Route exact path="/contacto">
           <Contacto></Contacto>
@@ -156,6 +207,9 @@ function App() {
         </Route>
         <Route exact path="/detalle">
           <DetalleNoticia></DetalleNoticia>
+        </Route>
+        <Route exact path="/registro">
+          <Registro></Registro>
         </Route>
         <Route exact path="*">
           <Error404></Error404>
