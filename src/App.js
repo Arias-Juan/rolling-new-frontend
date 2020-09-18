@@ -75,8 +75,8 @@ function App() {
       console.log(error);
     }
   };
-   // consulta a API categorias
-   useEffect(() => {
+  // consulta a API categorias
+  useEffect(() => {
     consultarCategoriaAPI();
     setRecargarCategoria(false)
   }, [recargarCategoria]);
@@ -176,24 +176,24 @@ function App() {
           <NuevaCategoria setRecargarCategoria={setRecargarCategoria}></NuevaCategoria>
         </Route>
         <Route exact path="/administracion/editarCategoria/:id"
-        render={(props) => {
-          // codigo a ejecutar antes de renderizar el componente
-          // obtengo el id de la lista
-          const idCategoria = parseInt(props.match.params.id);
-          console.log(idCategoria);
-          // buscar el producto que coincida con el id
-          const categoriaSelecionada = categoriaNuevas.find(
-            (ccategoria) => ccategoria.id === idCategoria
-          );
-          console.log(categoriaSelecionada);
-          // muestro el componente editarNoticias
-          return (
-            <EditarCategoria
-              Categoria={categoriaSelecionada}
-              setRecargarCategorias={setRecargarCategoria}
-            ></EditarCategoria>
-          );
-        }}>
+          render={(props) => {
+            // codigo a ejecutar antes de renderizar el componente
+            // obtengo el id de la lista
+            const idCategoria = parseInt(props.match.params.id);
+            console.log(idCategoria);
+            // buscar el producto que coincida con el id
+            const categoriaSelecionada = categoriaNuevas.find(
+              (ccategoria) => ccategoria.id === idCategoria
+            );
+            console.log(categoriaSelecionada);
+            // muestro el componente editarNoticias
+            return (
+              <EditarCategoria
+                Categoria={categoriaSelecionada}
+                setRecargarCategorias={setRecargarCategoria}
+              ></EditarCategoria>
+            );
+          }}>
         </Route>
         <Route exact path="/contacto">
           <Contacto></Contacto>

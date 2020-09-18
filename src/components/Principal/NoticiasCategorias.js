@@ -12,15 +12,18 @@ import { Link } from "react-router-dom";
 SwiperCore.use([Navigation, A11y, EffectFade]);
 
 const NoticiasCategorias = (props) => {
+    //console.log(props.itemCategoria.agregarCategoria)
+    
     //console.log(props.noticias) //me devuelve todas las noticias del sitio
     
 
     //console.log(props.noticiasSwiper) //me devuelve un arreglo con las noticias que aparecen marcadas para portada de categoria, sin importar la categoria
 
-    /*const noticias = props.noticiasSwiper.filter((itemNoticia) => {
-        return (itemNoticia.categoria) === itemNoticia.categoria
+    
+    const noticias = props.noticiasSwiper.filter((itemNoticia) => {
+        return (itemNoticia.categoria) === props.itemCategoria.agregarCategoria.toLowerCase()
     })
-    console.log(noticias); */
+    //console.log(props.itemCategoria.agregarCategoria.toLowerCase());
 
     return (
         <div className="mb-3">
@@ -35,7 +38,7 @@ const NoticiasCategorias = (props) => {
                 navigation
                 //onSwiper={(swiper) => console.log(swiper)}
                 //onSlideChange={() => console.log('slide change')}
-                loop={true}
+//                loop={true}
                 breakpoints={{
                     //cuando el  ancho de la ventana es mayor o igual que 280
                     280: {
@@ -69,7 +72,7 @@ const NoticiasCategorias = (props) => {
                         slidesPerView: 3,
                     },
                     1200: {
-                        width: 880,
+                        width: 800,
                         slidesPerView: 3,
                     }
                 }}
@@ -77,9 +80,8 @@ const NoticiasCategorias = (props) => {
                 {/* {props.categoriaNuevas.map((itemCategoria) => 
                 <NoticiasCategorias key={itemCategoria.id} itemCategoria={itemCategoria} noticias={props.noticias} noticiasSwiper={noticiasSwiperCategorias}>
               </NoticiasCategorias>)} */}
-                {props.noticiasSwiper.map((divNoticia) => (
+                {noticias.map((divNoticia) => (
                 <SwiperSlide><CardCategoria key={divNoticia.id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
-                
             </Swiper>
         </div>
     );
