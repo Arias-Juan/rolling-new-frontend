@@ -1,12 +1,14 @@
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+
 
 const Categorias = (props) => {
   const eliminarCategoria = (id) => {
@@ -61,44 +63,41 @@ const Categorias = (props) => {
     });
   };
   return (
-
     <article>
-      
-        <ListGroup.Item className="d-flex justify-content-between">
-         <div>
-           <h5>
-              <span className="font-weight-bold">
-                {props.categoriaItem.agregarCategoria}: {}
-              </span>
-              {props.categoriaItem.descripcionCategoria}
-            </h5>
-       </div>
-            <div>
-              <Link
-              className="btn btn-success mr-2"
-              size="sm"
-              to={`/administracion/editarCategoria/${props.categoriaItem.id}`}
-            >
-              <FontAwesomeIcon
-                icon={faEdit}
-                
-              ></FontAwesomeIcon>
-                
+      <ListGroup.Item>
+        <Container>
+          <Row>
+            <Col sm={8} className="d-flex justify-content-start">
+              <p>
+                <span className="font-weight-bold">
+                  {props.categoriaItem.agregarCategoria}: {}
+                </span>
+                {props.categoriaItem.descripcionCategoria}
+
+              </p>
+            </Col>
+            <Col sm={4} className="d-flex justify-content-end">
+              <ButtonGroup>
+                <Link
+                  className="btn btn-success rounded-pill mr-2"
+                  to={`/administracion/editarCategoria/${props.categoriaItem.id}`}
+                >
+                  <FontAwesomeIcon size="sm" icon={faEdit}></FontAwesomeIcon>
+                  Editar
                 </Link>
-            <Button
-              className="btn btn-danger"
-              type="button"
-              size="sm"
-              onClick={() => eliminarCategoria(props.categoriaItem.id)}
-            >
-              <FontAwesomeIcon
-                icon={faTrash}
-               size="50"
-              ></FontAwesomeIcon>
-                  
-                </Button></div>
-            
-        </ListGroup.Item>
+                <Button
+                  className="btn btn-danger rounded-pill mr-2"
+                  type="button"
+                  onClick={() => eliminarCategoria(props.categoriaItem.id)}
+                >
+                  <FontAwesomeIcon size="sm" icon={faTrash}></FontAwesomeIcon>
+                  Eliminar
+                </Button>
+              </ButtonGroup>
+            </Col>
+          </Row>
+        </Container>
+      </ListGroup.Item>
     </article>
   );
 };

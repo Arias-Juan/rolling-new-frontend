@@ -5,6 +5,8 @@ import Alert from "react-bootstrap/Alert";
 import Swal from "sweetalert2";
 import { withRouter } from "react-router-dom";
 import NavbarAdmin from "./common/NavbarAdmin";
+import Jumbotron from 'react-bootstrap/Jumbotron'
+
 
 const NuevaCategoria = (props) => {
   // creo el state para guardar los datos
@@ -71,10 +73,11 @@ const NuevaCategoria = (props) => {
 
   return (
     <Fragment>
-      <NavbarAdmin></NavbarAdmin>
-      <section className="container my-4 d-flex justify-content-center">
+     <NavbarAdmin></NavbarAdmin>
+      <section className="container  my-4 d-flex justify-content-center">
+      <Jumbotron className="w-75 d-flex justify-content-center">
         <Form className="w-75 mb-5" onSubmit={handleSubmit}>
-          <h1 className="text-center mb-4">Agregar Categoria</h1>
+          <h2 className="text-center mb-4">Agregar Categoria</h2>
           {error === true ? (
             <Alert variant={"danger"}>Todos los campos son obligatorios</Alert>
           ) : null}
@@ -105,6 +108,7 @@ const NuevaCategoria = (props) => {
             Guardar Categoria
           </Button>
         </Form>
+        </Jumbotron>
       </section>
     </Fragment>
   );

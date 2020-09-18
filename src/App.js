@@ -78,7 +78,7 @@ function App() {
    // consulta a API categorias
    useEffect(() => {
     consultarCategoriaAPI();
-    setRecargarCategoria(false)
+    setRecargarCategoria(false);
   }, [recargarCategoria]);
 
   const consultarCategoriaAPI = async () => {

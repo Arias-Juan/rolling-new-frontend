@@ -1,36 +1,6 @@
 {
   "noticia": [
     {
-      "tituloNoticia": "boca campeon del mundo",
-      "descripcionBreve": "boca",
-      "descripcionDetallada": "dadsdadad",
-      "imagenPrincipal": "daddad",
-      "categoria": "deportes",
-      "autor": "dadadada",
-      "fecha": "1111111",
-      "id": 12
-    },
-    {
-      "tituloNoticia": "boca",
-      "descripcionBreve": "final de liga",
-      "descripcionDetallada": "boca gano",
-      "imagenPrincipal": "222",
-      "categoria": "deportes",
-      "autor": "ssdsd",
-      "fecha": "22222",
-      "id": 13
-    },
-    {
-      "tituloNoticia": "ssdsada",
-      "descripcionBreve": "kkk",
-      "descripcionDetallada": "hhhh",
-      "imagenPrincipal": "vhvhkv",
-      "categoria": "economia",
-      "autor": "hvhvhv",
-      "fecha": "8888",
-      "id": 14
-    },
-    {
       "tituloNoticia": "Coronavirus Manifestacion",
       "descripcionBreve": "descripcionbrevedescripcionbrevedescripcionbrevedescripcionbrevedescripcionbreve",
       "descripcionDetallada": "descripcionlarga",
@@ -65,6 +35,18 @@
       "principalCategoria": "true",
       "fecha": "17/09/2020",
       "id": 17
+    },
+    {
+      "tituloNoticia": "boca",
+      "categoria": "economia",
+      "descripcionBreve": "dsadsdd",
+      "descripcionDetallada": "qq",
+      "imagenPrincipal": "qqq",
+      "autor": "qqq",
+      "fecha": "qqq",
+      "principalPortada": "false",
+      "principalCategoria": "false",
+      "id": 19
     }
   ],
   "categoria": [
