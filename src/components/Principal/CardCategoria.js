@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 const CardCategoria = (props) => {
     //console.log(props.divNoticia)
     let sectionStyle = {
-        /*width: "100%",
-        height: "400px",*/
         backgroundImage: `url(${props.divNoticia.imagenPrincipal})`
       };
     return (

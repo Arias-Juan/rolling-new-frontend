@@ -11,20 +11,11 @@ import { Link } from "react-router-dom";
 
 SwiperCore.use([Navigation, A11y, EffectFade]);
 
-const NoticiasCategorias = (props) => {
-    //console.log(props.itemCategoria.agregarCategoria)
-    
-    //console.log(props.noticias) //me devuelve todas las noticias del sitio
-    
-
-    //console.log(props.noticiasSwiper) //me devuelve un arreglo con las noticias que aparecen marcadas para portada de categoria, sin importar la categoria
-
-    
+const NoticiasCategorias = (props) => {    
     const noticias = props.noticiasSwiper.filter((itemNoticia) => {
         return (itemNoticia.categoria) === props.itemCategoria.agregarCategoria.toLowerCase()
     })
-    //console.log(props.itemCategoria.agregarCategoria.toLowerCase());
-
+ 
     return (
         <div className="mb-3">
             <Link exact={true} to="/*" className="text-decoration-none">
@@ -77,9 +68,6 @@ const NoticiasCategorias = (props) => {
                     }
                 }}
             >
-                {/* {props.categoriaNuevas.map((itemCategoria) => 
-                <NoticiasCategorias key={itemCategoria.id} itemCategoria={itemCategoria} noticias={props.noticias} noticiasSwiper={noticiasSwiperCategorias}>
-              </NoticiasCategorias>)} */}
                 {noticias.map((divNoticia) => (
                 <SwiperSlide><CardCategoria key={divNoticia.id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
             </Swiper>
