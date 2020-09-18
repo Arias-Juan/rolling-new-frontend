@@ -79,7 +79,7 @@ function App() {
   // consulta a API categorias
   useEffect(() => {
     consultarCategoriaAPI();
-    setRecargarCategoria(false)
+    setRecargarCategoria(false);
   }, [recargarCategoria]);
 
   const consultarCategoriaAPI = async () => {
@@ -108,7 +108,10 @@ function App() {
       <Header></Header>
       <Switch>
         <Route exact path="/">
-          <Inicio noticias={noticias} categoriaNuevas={categoriaNuevas}></Inicio>
+          <Inicio
+            noticias={noticias}
+            categoriaNuevas={categoriaNuevas}
+          ></Inicio>
         </Route>
         <Route exact path="/categorias/actualidad">
           <Actualidad categorias={categorias} noticias={noticias}></Actualidad>
@@ -120,7 +123,10 @@ function App() {
           <Economia categorias={categorias} noticias={noticias}></Economia>
         </Route>
         <Route exact path="/categorias/espectaculo">
-          <Espectaculo categorias={categorias} noticias={noticias}></Espectaculo>
+          <Espectaculo
+            categorias={categorias}
+            noticias={noticias}
+          ></Espectaculo>
         </Route>
         <Route exact path="/categorias/fotografia">
           <Fotografia categorias={categorias} noticias={noticias}></Fotografia>
@@ -171,12 +177,19 @@ function App() {
           <PrincipalAdmin></PrincipalAdmin>
         </Route>
         <Route exact path="/administracion/categoria">
-          <ListaCategoria categoriaNuevas={categoriaNuevas} setRecargarCategoria={setRecargarCategoria}></ListaCategoria>
+          <ListaCategoria
+            categoriaNuevas={categoriaNuevas}
+            setRecargarCategoria={setRecargarCategoria}
+          ></ListaCategoria>
         </Route>
         <Route exact path="/administracion/nuevacategoria">
-          <NuevaCategoria setRecargarCategoria={setRecargarCategoria}></NuevaCategoria>
+          <NuevaCategoria
+            setRecargarCategoria={setRecargarCategoria}
+          ></NuevaCategoria>
         </Route>
-        <Route exact path="/administracion/editarCategoria/:id"
+        <Route
+          exact
+          path="/administracion/editarCategoria/:id"
           render={(props) => {
             // codigo a ejecutar antes de renderizar el componente
             // obtengo el id de la lista
@@ -194,8 +207,8 @@ function App() {
                 setRecargarCategorias={setRecargarCategoria}
               ></EditarCategoria>
             );
-          }}>
-        </Route>
+          }}
+        ></Route>
         <Route exact path="/contacto">
           <Contacto></Contacto>
         </Route>
@@ -205,9 +218,16 @@ function App() {
         <Route exact path="/login">
           <Login></Login>
         </Route>
-        <Route exact path="/detalle">
-          <DetalleNoticia></DetalleNoticia>
-        </Route>
+        <Route exact
+        path="/noticias/detalle/:id" 
+        render={(props) => {
+          //obtener el id de la ruta..
+          const idNoticia = parseInt(props.match.params.id);
+          console.log(idNoticia)
+          const noticiaSeleccionada = noticias.find((itemNoticia) => (itemNoticia.id === idNoticia));
+          return (<DetalleNoticia noticias={noticiaSeleccionada}></DetalleNoticia>)
+        }}
+        ></Route>
         <Route exact path="/registro">
           <Registro></Registro>
         </Route>

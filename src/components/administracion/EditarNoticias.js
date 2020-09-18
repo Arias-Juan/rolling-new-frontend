@@ -284,13 +284,12 @@ const EditarNoticias = (props) => {
             <Form.Label className="font-weight-bold">
               Descripcion detallada
             </Form.Label>
-            <Form.Control
-              type="text"
-              placeholder=" Ej: boca gano 2 a 0"
-              name="descripcion breve"
-              ref={descripcionDetalladaRef}
-              defaultValue={props.noticia.descripcionDetallada}
-            />
+            <Form.Control as="textarea"
+            type="text"
+            placeholder=" Ej: boca gano 2 a 0"
+            name="descripcion breve"
+            ref={descripcionDetalladaRef}
+            defaultValue={props.noticia.descripcionDetallada} />
           </Form.Group>
           <Form.Group>
             <Form.Label className="font-weight-bold">

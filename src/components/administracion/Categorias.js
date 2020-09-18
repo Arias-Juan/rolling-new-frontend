@@ -5,8 +5,8 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+//import Row from 'react-bootstrap/Row'
+//import Col from 'react-bootstrap/Col'
 
 const Categorias = (props) => {
   const eliminarCategoria = (id) => {
