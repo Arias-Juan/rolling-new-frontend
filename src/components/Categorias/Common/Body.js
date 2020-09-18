@@ -111,7 +111,9 @@ const Body = (props) => {
                 <Card style={{ width: "21rem" }} className="mt-4 py-3">
                     <p className="text-muted ml-3">Publicidad:</p>
                     <div className="text-center">
+                      <a href="https://rollingcodeschool.com/" target="blank_">
                     <Image src={publicidad}></Image>
+                    </a>
                     </div>
                 </Card>
               </Col>

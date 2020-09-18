@@ -18,8 +18,7 @@ const HCard = (props) => {
                 </Link>
               </Card.Title>
               <Card.Text className="card-texto">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                {itemNoticia.descripcionBreve}
               </Card.Text>
             </Card.Body>
           </Link>
