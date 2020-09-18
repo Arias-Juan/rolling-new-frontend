@@ -185,12 +185,25 @@ div .cardCategoria {
   height: 100% !important;
 }
 
+/* estilo pagina registro */
+.red-input:focus {
+  border-color: #ff5e1f !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f7946d !important;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px){ 
+  .lugarClima{
+    font-size: 15px;
+  }
+}
+
 /*Dispositivos grandes */
 @media only screen and (min-width: 769px) {
   div .cardCategoria {
     height: 280px;
   }
 }
+
 /* Dispositivos medianos */
 @media only screen and (min-width: 500px) and (max-width: 768px) {
   .divisas {
@@ -246,5 +259,18 @@ div .cardCategoria {
   div .cardCategoria {
     height: 260px;
   }
+}
 
+/* -------login------ */
+.iconFB{
+  color: blue;
+}
+.iconGM{
+  color: #ff5e1f;
+}
+.iconTW{
+  color:aqua;
+}
+.lineaHR{
+  background-color:rgb(0, 0, 0);    
 }

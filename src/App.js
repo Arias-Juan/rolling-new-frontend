@@ -28,6 +28,7 @@ import NuevaCategoria from "./components/administracion/NuevaCategoria";
 import DetalleNoticia from "./components/Layout/DetalleNoticia";
 import ListaCategoria from "./components/administracion/ListaCategoria";
 import EditarCategoria from "./components/administracion/EditarCategoria";
+import Registro from "./components/Layout/Registro";
 
 function App() {
   //creamos un arreglo con las categorias
@@ -206,6 +207,9 @@ function App() {
         </Route>
         <Route exact path="/detalle">
           <DetalleNoticia></DetalleNoticia>
+        </Route>
+        <Route exact path="/registro">
+          <Registro></Registro>
         </Route>
         <Route exact path="*">
           <Error404></Error404>
