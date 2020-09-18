@@ -16,6 +16,7 @@ const Registro = () => {
 
   const [error, setError] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
+  const [errorPasswordLength, setErrorPasswordLength] = useState(false);
   const [errorCheck, setErrorCheck] = useState(false);
 
   const handleChange = (e) => {
@@ -40,6 +41,11 @@ const Registro = () => {
       return;
     }
     setError(false);
+    if (document.getElementById('registroPassword').value.length < 8){
+      setErrorPasswordLength(true);
+      return;
+    }
+    setErrorPasswordLength(false)
     if (
       document.getElementById("registroPassword").value !==
       document.getElementById("registroPassword2").value
@@ -147,6 +153,11 @@ const Registro = () => {
           {errorCheck ? (
             <Alert variant="danger">
               Debe aceptar los terminos y condiciones.
+            </Alert>
+          ) : null}
+                    {errorPasswordLength ? (
+            <Alert variant="danger">
+              Tu contraseña debe tener 8 o mas caracteres.
             </Alert>
           ) : null}
         </Card.Body>
