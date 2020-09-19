@@ -218,15 +218,27 @@ function App() {
         <Route exact path="/login">
           <Login></Login>
         </Route>
-        <Route exact
-        path="/noticias/detalle/:id" 
-        render={(props) => {
-          //obtener el id de la ruta..
-          const idNoticia = parseInt(props.match.params.id);
-          console.log(idNoticia)
-          const noticiaSeleccionada = noticias.find((itemNoticia) => (itemNoticia.id === idNoticia));
-          return (<DetalleNoticia noticias={noticiaSeleccionada}></DetalleNoticia>)
-        }}
+        <Route
+          exact
+          path="/noticias/detalle/:id"
+          render={(props) => {
+            //obtener el id de la ruta..
+            const idNoticia = parseInt(props.match.params.id);
+            console.log(idNoticia);
+            const noticiaSeleccionada = noticias.find(
+              (itemNoticia) => itemNoticia.id === idNoticia
+            );
+            const categoriaSeleccionada = noticias.filter(
+              (itemNoticia) => itemNoticia.categoria === noticiaSeleccionada.categoria
+            );
+            return (
+              <DetalleNoticia
+                noticias={noticiaSeleccionada}
+                categorias={categoriaSeleccionada}
+                key={idNoticia}
+              ></DetalleNoticia>
+            );
+          }}
         ></Route>
         <Route exact path="/registro">
           <Registro></Registro>
