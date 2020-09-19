@@ -132,3 +132,39 @@
     font-size: 3.1rem;
 }
 
+/* Elementos del detalle de cada noticia...*/
+
+.margenes{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.titulo-detalle{
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.badge-rn{
+    background-color: #ff5e1f;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.badge-rn:hover{
+    background-color: #300db1;
+    text-transform: uppercase;
+    color: #FFF;
+    -webkit-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    transition-delay: 20ms;
+}
+
+.texto-cuerpo{
+    font-size: larger;
+}
+
+.titulo-404{
+    font-size: x-large;
+    font-weight: 700;
+}

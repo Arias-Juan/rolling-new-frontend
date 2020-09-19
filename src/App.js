@@ -28,6 +28,7 @@ import NuevaCategoria from "./components/administracion/NuevaCategoria";
 import DetalleNoticia from "./components/Layout/DetalleNoticia";
 import ListaCategoria from "./components/administracion/ListaCategoria";
 import EditarCategoria from "./components/administracion/EditarCategoria";
+import Registro from "./components/Layout/Registro";
 
 function App() {
   //creamos un arreglo con las categorias
@@ -43,7 +44,7 @@ function App() {
   ];
   //inicializamos el state de las categorias
   const [categorias, setCategorias] = useState(_categorias);
-  console.log(setCategorias);
+  //console.log(setCategorias);
 
   const [noticias, setNoticias] = useState([]);
   const [recargarNoticias, setRecargarNoticias] = useState(true);
@@ -75,8 +76,8 @@ function App() {
       console.log(error);
     }
   };
-   // consulta a API categorias
-   useEffect(() => {
+  // consulta a API categorias
+  useEffect(() => {
     consultarCategoriaAPI();
     setRecargarCategoria(false);
   }, [recargarCategoria]);
@@ -85,9 +86,9 @@ function App() {
     try {
       // obtengo la lista de noticias
       const consultar = await fetch("http://localhost:4000/categoria");
-      console.log(consultar);
+      //console.log(consultar);
       const respuestas = await consultar.json();
-      console.log(respuestas);
+      //console.log(respuestas);
       if ((await consultar.status) !== 200) {
         Swal.fire({
           icon: "error",
@@ -98,7 +99,7 @@ function App() {
       // guardo en el state
       setcategoriaNuevas(respuestas);
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
 
@@ -107,7 +108,10 @@ function App() {
       <Header></Header>
       <Switch>
         <Route exact path="/">
-          <Inicio noticias={noticias}></Inicio>
+          <Inicio
+            noticias={noticias}
+            categoriaNuevas={categoriaNuevas}
+          ></Inicio>
         </Route>
         <Route exact path="/categorias/actualidad">
           <Actualidad categorias={categorias} noticias={noticias}></Actualidad>
@@ -119,7 +123,10 @@ function App() {
           <Economia categorias={categorias} noticias={noticias}></Economia>
         </Route>
         <Route exact path="/categorias/espectaculo">
-          <Espectaculo categorias={categorias} noticias={noticias}></Espectaculo>
+          <Espectaculo
+            categorias={categorias}
+            noticias={noticias}
+          ></Espectaculo>
         </Route>
         <Route exact path="/categorias/fotografia">
           <Fotografia categorias={categorias} noticias={noticias}></Fotografia>
@@ -170,31 +177,38 @@ function App() {
           <PrincipalAdmin></PrincipalAdmin>
         </Route>
         <Route exact path="/administracion/categoria">
-          <ListaCategoria categoriaNuevas={categoriaNuevas} setRecargarCategoria={setRecargarCategoria}></ListaCategoria>
+          <ListaCategoria
+            categoriaNuevas={categoriaNuevas}
+            setRecargarCategoria={setRecargarCategoria}
+          ></ListaCategoria>
         </Route>
         <Route exact path="/administracion/nuevacategoria">
-          <NuevaCategoria setRecargarCategoria={setRecargarCategoria}></NuevaCategoria>
+          <NuevaCategoria
+            setRecargarCategoria={setRecargarCategoria}
+          ></NuevaCategoria>
         </Route>
-        <Route exact path="/administracion/editarCategoria/:id"
-        render={(props) => {
-          // codigo a ejecutar antes de renderizar el componente
-          // obtengo el id de la lista
-          const idCategoria = parseInt(props.match.params.id);
-          console.log(idCategoria);
-          // buscar el producto que coincida con el id
-          const categoriaSelecionada = categoriaNuevas.find(
-            (ccategoria) => ccategoria.id === idCategoria
-          );
-          console.log(categoriaSelecionada);
-          // muestro el componente editarNoticias
-          return (
-            <EditarCategoria
-              Categoria={categoriaSelecionada}
-              setRecargarCategorias={setRecargarCategoria}
-            ></EditarCategoria>
-          );
-        }}>
-        </Route>
+        <Route
+          exact
+          path="/administracion/editarCategoria/:id"
+          render={(props) => {
+            // codigo a ejecutar antes de renderizar el componente
+            // obtengo el id de la lista
+            const idCategoria = parseInt(props.match.params.id);
+            console.log(idCategoria);
+            // buscar el producto que coincida con el id
+            const categoriaSelecionada = categoriaNuevas.find(
+              (ccategoria) => ccategoria.id === idCategoria
+            );
+            console.log(categoriaSelecionada);
+            // muestro el componente editarNoticias
+            return (
+              <EditarCategoria
+                Categoria={categoriaSelecionada}
+                setRecargarCategorias={setRecargarCategoria}
+              ></EditarCategoria>
+            );
+          }}
+        ></Route>
         <Route exact path="/contacto">
           <Contacto></Contacto>
         </Route>
@@ -204,8 +218,18 @@ function App() {
         <Route exact path="/login">
           <Login></Login>
         </Route>
-        <Route exact path="/detalle">
-          <DetalleNoticia></DetalleNoticia>
+        <Route exact
+        path="/noticias/detalle/:id" 
+        render={(props) => {
+          //obtener el id de la ruta..
+          const idNoticia = parseInt(props.match.params.id);
+          console.log(idNoticia)
+          const noticiaSeleccionada = noticias.find((itemNoticia) => (itemNoticia.id === idNoticia));
+          return (<DetalleNoticia noticias={noticiaSeleccionada}></DetalleNoticia>)
+        }}
+        ></Route>
+        <Route exact path="/registro">
+          <Registro></Registro>
         </Route>
         <Route exact path="*">
           <Error404></Error404>

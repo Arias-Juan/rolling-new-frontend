@@ -6,7 +6,7 @@ import Spinner from './Spinner'
 
 const DivClima = ({ clima, loader }) => {
 
-  console.log(loader)
+  //console.log(loader)
   const componenteCondicional = loader ? (
     <Spinner></Spinner>
   ) : (

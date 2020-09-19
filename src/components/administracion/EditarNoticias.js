@@ -124,7 +124,6 @@ const EditarNoticias = (props) => {
 
   return (
     <Fragment>
-
       <NavbarAdmin></NavbarAdmin>
       <section className=" my-4 d-flex justify-content-center">
         <Jumbotron className="w-75 d-flex justify-content-center">

@@ -11,11 +11,15 @@ import { Link } from "react-router-dom";
 
 SwiperCore.use([Navigation, A11y, EffectFade]);
 
-const NoticiasCategorias = () => {
+const NoticiasCategorias = (props) => {    
+    const noticias = props.noticiasSwiper.filter((itemNoticia) => {
+        return (itemNoticia.categoria) === props.itemCategoria.agregarCategoria.toLowerCase()
+    })
+ 
     return (
         <div className="mb-3">
             <Link exact={true} to="/*" className="text-decoration-none">
-                <h4 className="titulo-categoria card-titulo">Categoria</h4>
+                <h4 className="titulo-categoria card-titulo">{props.itemCategoria.agregarCategoria}</h4>
             </Link>
             <hr className="bg-dark"></hr>
 
@@ -23,9 +27,9 @@ const NoticiasCategorias = () => {
                 spaceBetween={20}
                 slidesPerView={3}
                 navigation
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
-                loop={true}
+                //onSwiper={(swiper) => console.log(swiper)}
+                //onSlideChange={() => console.log('slide change')}
+//                loop={true}
                 breakpoints={{
                     //cuando el  ancho de la ventana es mayor o igual que 280
                     280: {
@@ -59,24 +63,13 @@ const NoticiasCategorias = () => {
                         slidesPerView: 3,
                     },
                     1200: {
-                        width: 880,
+                        width: 800,
                         slidesPerView: 3,
                     }
                 }}
             >
-                {/* aca deberia ir una funcion map */}
-                <SwiperSlide>
-                    <CardCategoria></CardCategoria>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardCategoria></CardCategoria>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardCategoria></CardCategoria>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardCategoria></CardCategoria>
-                </SwiperSlide>
+                {noticias.map((divNoticia) => (
+                <SwiperSlide><CardCategoria key={divNoticia.id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
             </Swiper>
         </div>
     );
