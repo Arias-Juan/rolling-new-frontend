@@ -42,70 +42,23 @@ const Body = (props) => {
                     <Card.Subtitle className="mb-2 text-muted">
                       Estos son los titulos más importantes de la semana. No dejes de verlos.
                     </Card.Subtitle>
-                    <Card.Text>
+                    {
+                      props.noticias.map((itemNoticia) => (
+                        <Card.Text>
                       <h5 className="color-naranja mt-4">
-                        <b className="titulo-card">1</b> &nbsp;{" "}
                         <Link
                           className="card-texto text-decoration-none"
                           exact={true}
-                          to="/*"
+                          to={`/noticias/detalle/${itemNoticia.id}`}
                         >
-                          Titulo 1
+                          {itemNoticia.tituloNoticia}
                         </Link>
                       </h5>
-                    </Card.Text>
                     <hr></hr>
-                    <Card.Text>
-                      <h5 className="color-naranja">
-                      <b className="titulo-card">2</b> &nbsp;{" "}
-                        <Link
-                          className="card-texto text-decoration-none"
-                          exact={true}
-                          to="/*"
-                        >
-                          Titulo 1
-                        </Link>
-                      </h5>
                     </Card.Text>
-                    <hr></hr>
-                    <Card.Text>
-                      <h5 className="color-naranja">
-                      <b className="titulo-card">3</b> &nbsp;{" "}
-                        <Link
-                          className="card-texto text-decoration-none"
-                          exact={true}
-                          to="/*"
-                        >
-                          Titulo 1
-                        </Link>
-                      </h5>
-                    </Card.Text>
-                    <hr></hr>
-                    <Card.Text>
-                      <h5 className="color-naranja">
-                      <b className="titulo-card">4</b> &nbsp;{" "}
-                        <Link
-                          className="card-texto text-decoration-none"
-                          exact={true}
-                          to="/*"
-                        >
-                          Titulo 1
-                        </Link>
-                      </h5>
-                    </Card.Text>
-                    <hr></hr>
-                    <Card.Text>
-                      <h5 className="color-naranja">
-                      <b className="titulo-card">5</b> &nbsp;{" "}
-                        <Link
-                          className="card-texto text-decoration-none"
-                          exact={true}
-                          to="/*"
-                        >
-                          Titulo 1
-                        </Link>
-                      </h5>
-                    </Card.Text>
+                      )).slice(0,5)
+                    }
+                    
                   </Card.Body>
                 </Card>
                 <Card style={{ width: "21rem" }} className="mt-4 py-3">
