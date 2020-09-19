@@ -20,17 +20,22 @@ const Fotografia = (props) => {
     return (itemNoticia.principalCategoria === "true" && itemNoticia.categoria === "fotografia");
   });
 
-  console.log(portada);
+  console.log(noticiasFotografia);
 
   //para la ventana modal
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [idFoto, setIdFoto] = useState(0);
+
+  const noticiaModal = noticiasFotografia.find((itemNoticia) => {
+    return (itemNoticia.id === idFoto)
+  })
+
+  console.log(noticiaModal)
+
 
   return (
     <div className="mb-4">
-      {/* <Banner titulo={props.categorias[4]} noticias={portada}></Banner> */}
-      <div className="bg-naranja d-none d-lg-block m-0">
+      <div className="bg-naranja d-none d-lg-block py-3 mb-2 bg-naranja-fotografia">
         <h2 className="titulo text-center my-5">{props.categorias[4]}</h2>
       </div>
       <hr></hr>
@@ -42,38 +47,53 @@ const Fotografia = (props) => {
         <Row>
           {noticiasFotografia.map((itemNoticiaFotografia) =>
             <Col xs={12} md={6} lg={4} className="p-0 m-0">
-              <div><Link onClick={handleShow}>
-                <img src={itemNoticiaFotografia.imagenPrincipal} alt={itemNoticiaFotografia.descripcionBreve} className="w-100 p-1"></img>
-              </Link></div>
-              <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>
-                    {itemNoticiaFotografia.tituloNoticia}
-                  </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <div className="text-center">
-                    <img src={itemNoticiaFotografia.imagenPrincipal} alt={itemNoticiaFotografia.descripcionBreve} className="w-100 p-1"></img>
-                  </div>
-                  {/* <div>
-                    <p className="font-weight-light">{itemNoticiaFotografia.descripcionDetallada}</p>
-                  </div> */}
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button
-                    variant="secondary"
-                    onClick={handleClose}
-                    className="rounded-pill"
-                  >
-                    Cerrar
-                  </Button>
-                </Modal.Footer>
-              </Modal>
+              <div>
+                <Link onMouseOver={() => setIdFoto(itemNoticiaFotografia.id)} onClick={() => setShow(true)}>
+                  <img src={itemNoticiaFotografia.imagenPrincipal} alt={itemNoticiaFotografia.descripcionBreve} className="w-100 p-1"></img>
+                </Link>
+              </div>
             </Col>
           ).reverse()}
         </Row>
       </Container>
 
+      <Modal
+        size="lg"
+        show={show}
+        onHide={() => setShow(false)}
+        aria-labelledby={`modal-fotografia-${idFoto}`}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id={`modal-fotografia-${idFoto}`}>
+            {(noticiaModal !== undefined) ?
+              <h3>{noticiaModal.tituloNoticia}</h3>
+              : null}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="text-center">
+            {(noticiaModal !== undefined) ?
+              <img src={noticiaModal.imagenPrincipal} alt={noticiaModal.descripcionBreve} className="w-100 p-1 imagenModal"></img>
+              : null}
+          </div>
+          <hr></hr>
+          {(noticiaModal !== undefined) ?
+            <h5>{noticiaModal.descripcionBreve}</h5>
+            : null}
+          {(noticiaModal !== undefined) ?
+            <p className="text-justify">{noticiaModal.descripcionDetallada}</p>
+            : null}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="secondary"
+            onClick={() => setShow(false)}
+            className="rounded-pill"
+          >
+            Cerrar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
