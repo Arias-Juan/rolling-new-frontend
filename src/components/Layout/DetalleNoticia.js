@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import imgPrueba from ".../../../src/img/Pruebas/prueba-01-01.jpg";
+//import imgPrueba from ".../../../src/img/Pruebas/prueba-01-01.jpg";
 import "../../categorias.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -9,7 +9,7 @@ import Image from "react-bootstrap/Image";
 import { Link } from "react-router-dom";
 import PublicidadH from "../common/PublicidadH";
 import publicidad from "../../img/Pruebas/publicidad-02.jpg";
-import  {withRouter} from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 
 const DetalleNoticia = (props) => {
   return (
@@ -20,26 +20,30 @@ const DetalleNoticia = (props) => {
             <div>
               <Link exact={true} to="/*">
                 <h4>
-  <Badge className="badge-rn">{props.noticias.categoria}</Badge>
+                  <Badge className="badge-rn">{props.noticias.categoria}</Badge>
                 </h4>
               </Link>
             </div>
-            <h1 className="titulo-detalle text-dark">{props.noticias.tituloNoticia}</h1>
+            <h1 className="titulo-detalle text-dark">
+              {props.noticias.tituloNoticia}
+            </h1>
             {/* Titulo recibido por props */}
-            <h5 className="lead">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content. Some quick example text to build on
-              the card title and make up the bulk of the card's content.
-            </h5>
+            <h5 className="lead">{props.noticias.descripcionBreve}</h5>
             <hr></hr>
-            <p className="lead">Fecha: {props.noticias.fecha} | Autor: {props.noticias.autor}</p>
+            <p className="lead">
+              Fecha: {props.noticias.fecha} | Autor: {props.noticias.autor}
+            </p>
             {/* Descripcion breve recibida por props */}
             <div className="text-center my-3">
-              <img className="w-100" src={props.noticias.imagenPrincipal} alt={props.noticias.descripcionBreve}></img>
+              <img
+                className="w-100"
+                src={props.noticias.imagenPrincipal}
+                alt={props.noticias.descripcionBreve}
+              ></img>
               {/* Se recibe por props el src que debe ser una url */}
             </div>
             <p className="text-justify texto-cuerpo">
-            {props.noticias.descripcionDetallada}
+              {props.noticias.descripcionDetallada}
             </p>
           </section>
           <hr></hr>
@@ -50,73 +54,30 @@ const DetalleNoticia = (props) => {
           <Card style={{ width: "21rem" }} className="ml-auto">
             <Card.Body>
               <Card.Title className="color-naranja titulo-card">
-                Mas de -Categoria
+                Mas de {props.noticias.categoria}
               </Card.Title>
-              <Card.Text>
-                <h5 className="color-naranja mt-4">
-                  <Link
-                    className="card-texto text-decoration-none"
-                    exact={true}
-                    to="/*"
-                  >
-                    Titulo 1
-                  </Link>
-                </h5>
-              </Card.Text>
-              <hr></hr>
-              <Card.Text>
-                <h5 className="color-naranja">
-                  <Link
-                    className="card-texto text-decoration-none"
-                    exact={true}
-                    to="/*"
-                  >
-                    Titulo 1
-                  </Link>
-                </h5>
-              </Card.Text>
-              <hr></hr>
-              <Card.Text>
-                <h5 className="color-naranja">
-                  <Link
-                    className="card-texto text-decoration-none"
-                    exact={true}
-                    to="/*"
-                  >
-                    Titulo 1
-                  </Link>
-                </h5>
-              </Card.Text>
-              <hr></hr>
-              <Card.Text>
-                <h5 className="color-naranja">
-                  <Link
-                    className="card-texto text-decoration-none"
-                    exact={true}
-                    to="/*"
-                  >
-                    Titulo 1
-                  </Link>
-                </h5>
-              </Card.Text>
-              <hr></hr>
-              <Card.Text>
-                <h5 className="color-naranja">
-                  <Link
-                    className="card-texto text-decoration-none"
-                    exact={true}
-                    to="/*"
-                  >
-                    Titulo 1
-                  </Link>
-                </h5>
-              </Card.Text>
+              {props.categorias.map((itemNoticia) => (
+                <Card.Text>
+                  <h5 className="color-naranja mt-4">
+                    <Link
+                      className="card-texto text-decoration-none"
+                      exact={true}
+                      to={`/noticias/detalle/${itemNoticia.id}`}
+                    >
+                      {itemNoticia.tituloNoticia}
+                    </Link>
+                  </h5>
+                  <hr></hr>
+                </Card.Text>
+              )).slice(0,5)}
             </Card.Body>
           </Card>
           <Card style={{ width: "21rem" }} className="mt-4 py-3">
             <p className="text-muted ml-3">Publicidad:</p>
             <div className="text-center">
-              <a href="https://rollingcodeschool.com" target="blank_"><Image src={publicidad}></Image></a>
+              <a href="https://rollingcodeschool.com" target="blank_">
+                <Image src={publicidad}></Image>
+              </a>
             </div>
           </Card>
         </Col>
@@ -125,4 +86,4 @@ const DetalleNoticia = (props) => {
   );
 };
 
-export default withRouter (DetalleNoticia);
+export default withRouter(DetalleNoticia);
