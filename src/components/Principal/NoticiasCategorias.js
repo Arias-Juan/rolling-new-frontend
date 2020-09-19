@@ -11,11 +11,11 @@ import { Link } from "react-router-dom";
 
 SwiperCore.use([Navigation, A11y, EffectFade]);
 
-const NoticiasCategorias = (props) => {    
+const NoticiasCategorias = (props) => {
     const noticias = props.noticiasSwiper.filter((itemNoticia) => {
         return (itemNoticia.categoria) === props.itemCategoria.agregarCategoria.toLowerCase()
     })
- 
+
     return (
         <div className="mb-3">
             <Link exact={true} to="/*" className="text-decoration-none">
@@ -29,7 +29,7 @@ const NoticiasCategorias = (props) => {
                 navigation
                 //onSwiper={(swiper) => console.log(swiper)}
                 //onSlideChange={() => console.log('slide change')}
-//                loop={true}
+                //                loop={true}
                 breakpoints={{
                     //cuando el  ancho de la ventana es mayor o igual que 280
                     280: {
@@ -69,7 +69,7 @@ const NoticiasCategorias = (props) => {
                 }}
             >
                 {noticias.map((divNoticia) => (
-                <SwiperSlide><CardCategoria key={divNoticia.id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
+                    <SwiperSlide><CardCategoria key={divNoticia.id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
             </Swiper>
         </div>
     );
