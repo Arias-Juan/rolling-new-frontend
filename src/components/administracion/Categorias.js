@@ -8,7 +8,9 @@ import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
-
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
+import Table from "react-bootstrap/Table";
 
 const Categorias = (props) => {
   const eliminarCategoria = (id) => {
@@ -73,7 +75,6 @@ const Categorias = (props) => {
                   {props.categoriaItem.agregarCategoria}: {}
                 </span>
                 {props.categoriaItem.descripcionCategoria}
-
               </p>
             </Col>
             <Col sm={4} className="d-flex justify-content-end">
@@ -97,6 +98,29 @@ const Categorias = (props) => {
             </Col>
           </Row>
         </Container>
+        <Accordion defaultActiveKey="1" className="py-2">
+          <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
+            <p className="text-primary">Ver lista de noticias</p>
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="0">
+            <Table striped bordered hover size="sm" responsive>
+              <tbody>
+                <tr>
+                  <td>nombre Noticias</td>
+                  <td className="text-center">
+                    <Button type="button">Ver</Button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>nombre Noticias</td>
+                  <td className="text-center">
+                    <Button type="button">Ver</Button>
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+          </Accordion.Collapse>
+        </Accordion>
       </ListGroup.Item>
     </article>
   );
