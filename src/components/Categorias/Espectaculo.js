@@ -24,6 +24,7 @@ const Espectaculo = (props) => {
         </div>
         <hr></hr>
         <Body noticias={noticiasEspectaculo}></Body>
+        
       </div>
     );
 };

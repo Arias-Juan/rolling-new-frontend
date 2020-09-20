@@ -2,14 +2,14 @@
   "noticia": [
     {
       "tituloNoticia": "Boca campeon del mundo",
-      "descripcionBreve": "Bocad",
-      "descripcionDetallada": "sdsaddas asdasdsd asdasd sad",
+      "descripcionBreve": "Boca",
+      "descripcionDetallada": "dsaddas asdasdsd asdasd sad",
       "imagenPrincipal": "http://www.planetabocajuniors.com.ar/wp-content/uploads/2020/09/ledesma2.jpg",
       "categoria": "deportes",
-      "autor": "dadadadas",
+      "autor": "dadadada",
       "principalPortada": "false",
-      "principalCategoria": "true",
-      "fecha": "1111111d",
+      "principalCategoria": "false",
+      "fecha": "1111111",
       "id": 12
     },
     {
@@ -20,7 +20,7 @@
       "categoria": "deportes",
       "autor": "ssdsdsd",
       "principalPortada": "false",
-      "principalCategoria": "true",
+      "principalCategoria": "false",
       "fecha": "22222s",
       "id": 13
     },
