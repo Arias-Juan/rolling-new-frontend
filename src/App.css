@@ -274,3 +274,15 @@ div .cardCategoria {
 .lineaHR{
   background-color:rgb(0, 0, 0);    
 }
+
+/* Estilo Fotografias */
+.imagenModal{
+  object-fit: scale-down; 
+  width: 100%; 
+  max-height: 600px;
+  max-width: 990px;
+}
+
+.bg-naranja-fotografia{
+  height: 160px !important;
+}

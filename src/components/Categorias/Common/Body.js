@@ -13,7 +13,7 @@ import "../../../categorias.css";
 
 const Body = (props) => {
 
-  console.log(props.noticias)
+  //console.log(props.noticias)
 
   return (
     <Fragment>

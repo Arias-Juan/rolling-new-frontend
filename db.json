@@ -47,6 +47,54 @@
       "principalPortada": "false",
       "principalCategoria": "false",
       "id": 18
+    },
+    {
+      "tituloNoticia": "scascsacscd",
+      "categoria": "actualidad",
+      "descripcionBreve": "dwdqew",
+      "descripcionDetallada": "fewfffewfewfeqq",
+      "imagenPrincipal": "https://deconceptos.com/wp-content/uploads/2008/10/concepto-de-noticia-1.jpg",
+      "autor": "sadsadasd",
+      "fecha": "afef",
+      "principalPortada": "false",
+      "principalCategoria": "true",
+      "id": 19
+    },
+    {
+      "tituloNoticia": "Iglesia San Francisco",
+      "categoria": "fotografia",
+      "descripcionBreve": "La basilica de San Francisco fue construida en el año 1767",
+      "descripcionDetallada": "La Iglesia de San Francisco de San Miguel de Tucumán, se encuentra ubicada en la esquina conformada por las calles San Martín y 25 de Mayo, se ubica hacia el ángulo noroeste de la Plaza Independencia esto es, en pleno casco histórico de la ciudad; tal basílica ha sido la sede de la primera escuela franciscana. Fue construida en el año 1767. Fue remodelada entre los años 1879 y 1885.\n\nEn su interior se guardan objetos históricos como por ejemplo: la mesa donde se firmó el acta de la Independencia de Argentina, la primera bandera nacional argentina [cita requerida] enarbolada en Tucumán, el 8 de octubre de 1812, el altar mayor que fue realizado por indígenas de Misiones.\n\nFrente al altar se encuentra enterrado Monseñor José Agustín Molina, que fue prosecretario del Congreso de Tucumán en 1816. En unas de las alas del convento tuvieron su alojamiento y enfermería las tropas de Manuel Belgrano luego de la Batalla de Tucumán.\n\nActualmente se encuentra cerrada por remodelaciones.",
+      "imagenPrincipal": "https://upload.wikimedia.org/wikipedia/commons/5/56/06._Tucuman_%2814%29%2C_Templo_de_San_Francisco.JPG",
+      "autor": "Luciana",
+      "fecha": "06/09/2020",
+      "principalPortada": "false",
+      "principalCategoria": "true",
+      "id": 20
+    },
+    {
+      "tituloNoticia": "Casa de Gobierno de Tucuman",
+      "categoria": "fotografia",
+      "descripcionBreve": "Monumento histórico nacional y sede del gobierno provincial de Tucumán",
+      "descripcionDetallada": "La Casa de Gobierno de Tucumán es un monumento histórico nacional y sede del gobierno provincial de Tucumán, en la ciudad de San Miguel de Tucumán, Argentina. A comienzos del siglo XX, la provincia de Tucumán carecía de edificios de importancia, siendo la más poblada y poderosa en el Noroeste argentino. Para remediar esa falta y para impulsar la renovación urbana y el desarrollo en la ciudad de San Miguel, el gobernador Luis Nougués impulsó la construcción de un palacio de gobierno que reemplazara al cabildo de los tiempos coloniales, que era todavía utilizado como sede de la administración provincial. Además, alojaba la casa de justicia y una pequeña cárcel.1​\n\nEl Gobernador encargó al ingeniero porteño Domingo Selva el diseño, para el cual se eligió una combinación arquitectura ecléctica de barroco francés con toques italianizantes y algunos adornos art nouveau. Luego de la demolición del Cabildo, se adquirieron las dos propiedades vecinas, y la construcción comenzó en 1908. El nuevo edificio fue inaugurado el 9 de julio de 1912 por el Gobernador José Frías Silva y el Presidente Roque Sáenz Peña, aunque comenzó a habilitarse dos años antes.\nEnfrentado a la Plaza Independencia, la principal de la ciudad, el edificio sigue siendo uno de los más importantes de la ciudad. Su fachada imponente se complementa con interiores muy ornamentados, destacándose el Salón Blanco, utilizado históricamente para los actos oficiales, con sus arañas luminosas y los cielorrasos decorados por el pintor historicista Julio Vila y Prades (y recientemente restaurados por el escultor tucumano Santos Legname).\nLos restos de uno de los tucumanos más distinguidos, Juan Bautista Alberdi, fueron trasladados desde el Cementerio de la Recoleta en Buenos Aires hasta Tucumán el 28 de agosto de 1991, para ser colocados en una cripta construida especialmente en los sótanos del palacio de gobierno.",
+      "imagenPrincipal": "https://2.bp.blogspot.com/-9faCUJ61_FQ/UnrTofhXjBI/AAAAAAAADeQ/SL8fGPaS9Zw/s1600/IMG_0159.JPG",
+      "autor": "Luciana",
+      "fecha": "05/09/2020",
+      "principalPortada": "false",
+      "principalCategoria": "false",
+      "id": 21
+    },
+    {
+      "tituloNoticia": "La casa histórica en 1868",
+      "categoria": "fotografia",
+      "descripcionBreve": "Antigua fachada de la casa histórica de Tucumán",
+      "descripcionDetallada": "La Casa de Tucumán o Casa Histórica de la Independencia es una casa colonial localizada en el centro de la ciudad argentina de San Miguel de Tucumán, donde un cuerpo de delegados de la mayoría de las Provincias Unidas del Río de la Plata, conocido como el Congreso de Tucumán, proclamó la declaración de independencia de la Argentina, el 9 de julio de 1816. Fue declarada Monumento Histórico Nacional en 1941.\n\nLa casa es hoy el museo, llamado oficialmente Museo casa Histórica de la Independencia.",
+      "imagenPrincipal": "https://i.pinimg.com/originals/31/82/b7/3182b7ef39f43d42dd9d8da97c7f3529.jpg",
+      "autor": "Aasd",
+      "fecha": "17/07/2020",
+      "principalPortada": "true",
+      "principalCategoria": "true",
+      "id": 22
     }
   ],
   "categoria": [

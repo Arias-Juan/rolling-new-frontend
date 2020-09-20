@@ -49,11 +49,6 @@ const Inicio = (props) => {
             <Col xs={8} className="p-0">
               {props.categoriaNuevas.map((itemCategoria) => <NoticiasCategorias key={itemCategoria.id} itemCategoria={itemCategoria} noticiasSwiper={noticiasSwiperCategorias}>
               </NoticiasCategorias>)}
-
-              {/* {props.categoriaNuevas.map((itemCategoria) => (
-            <Categorias key={itemCategoria.id} categoriaItem={itemCategoria} 
-            setRecargarCategoria={props.setRecargarCategoria}></Categorias>  
-          ))} */}
             </Col>
             <Col xs={3} lg={2} className="p-0">
               <Patrocinadores></Patrocinadores>

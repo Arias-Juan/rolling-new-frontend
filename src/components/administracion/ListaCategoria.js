@@ -1,8 +1,7 @@
-import React,  { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import ListGroup from "react-bootstrap/ListGroup";
 import Categorias from './Categorias';
 import NavbarAdmin from "./common/NavbarAdmin";
-
 
 const ListaCategoria = (props) => {
   return (
@@ -18,7 +17,6 @@ const ListaCategoria = (props) => {
         </ListGroup>
       </section>
     </Fragment>
-
   );
 };
 
