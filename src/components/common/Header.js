@@ -156,7 +156,7 @@ const Header = () => {
                 className="rn-nav-link"
               >
                 <NavDropdown.Item href="/login">Ingresar</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item href="/registro">
                   Registrarse
                 </NavDropdown.Item>
               </NavDropdown>
