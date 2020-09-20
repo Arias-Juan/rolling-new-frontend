@@ -185,16 +185,16 @@ const handleSubmit = (e) => {
                   <Link
                     className="link-footer mx-3 my-1"
                     exact={true}
-                    to="/categorias/deporte"
+                    to="/categorias/deportes"
                   >
-                    Deporte
+                    Deportes
                   </Link>
                   <Link
                     className="link-footer mx-3 my-1"
                     exact={true}
-                    to="/categorias/espectaculo"
+                    to="/categorias/espectaculos"
                   >
-                    Espectaculo
+                    Espectaculos
                   </Link>
                   <Link
                     className="link-footer mx-3 my-1"

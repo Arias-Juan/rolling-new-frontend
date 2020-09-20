@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../../../categorias.css";
 
 const Cards = (props) => {
-  console.log(props.noticias);
+  //console.log(props.noticias);
   return (
     <Link
       exact={true}
@@ -18,7 +18,7 @@ const Cards = (props) => {
               <img
                 src={props.noticias.imagenPrincipal}
                 className="card-img"
-                alt="imgPrueba"
+                alt={props.noticias.descripcionBreve}
               ></img>
             </div>
             <div className="col-md-8">

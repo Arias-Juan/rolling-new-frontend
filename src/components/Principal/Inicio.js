@@ -12,7 +12,7 @@ import Col from 'react-bootstrap/Col'
 
 const Inicio = (props) => {
   
-  console.log(props.categoriaNuevas) //
+  //console.log(props.categoriaNuevas) //
   const portada = props.noticias.filter((itemNoticia) => {
     return (itemNoticia.principalPortada === "true");
   });

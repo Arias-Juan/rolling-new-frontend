@@ -14,7 +14,8 @@ const ListaNoticias = (props) => {
       {props.noticias.map((itemNoticia) => (
         <Noticia key={itemNoticia.id} noticiaItem={itemNoticia} 
         setRecargarNoticias={props.setRecargarNoticias}></Noticia>
-      ))}
+      )).reverse()}
+      
       </ListGroup>
     </section>
     </Fragment>

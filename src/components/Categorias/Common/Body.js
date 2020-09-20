@@ -27,7 +27,7 @@ const Body = (props) => {
                     key={itemNoticia.id}
                     noticias={itemNoticia}
                   ></Cards>
-                  ))
+                  )).reverse()
               }
               
             </Col>

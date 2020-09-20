@@ -168,3 +168,49 @@
     font-size: x-large;
     font-weight: 700;
 }
+
+.bg-login{
+    background: linear-gradient(226deg, #ff5e1f, #300db1);
+    background-size: 400% 400%;
+
+    -webkit-animation: portada-animacion 16s ease infinite;
+    -moz-animation: portada-animacion 16s ease infinite;
+    animation: portada-animacion 16s ease infinite;
+
+    width: 100%;
+    
+}
+
+.naranja-rn{
+    color: #ff5e1f;
+}
+
+.naranja-rn:hover{
+    color: #ff5e1f;
+}
+
+.btn-rn {
+    color: #fff !important;
+    background-color: #ff5e1f !important;
+    font-weight: 700;
+  }
+  
+  .btn-rn {
+    color: #fff !important;
+    background-color: #ff5e1f !important;
+    border: none !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    font-size: larger !important;
+  }
+  .btn-rn:hover {
+    color: #fff !important;
+    background-color: #ff5e1f !important;
+    border: none !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    font-size: larger !important;
+    -webkit-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
+  }
