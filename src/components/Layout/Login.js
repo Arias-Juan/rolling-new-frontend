@@ -44,7 +44,7 @@ const Login = () => {
   return (
     <Row className="d-flex justify-content-center">
     <Col xs={12} lg={6} className="mx-auto my-5">
-      <div className="container">
+        <div className="container">
         <div>
           <h5 className="text-light">Iniciar sesión</h5>
         </div>
