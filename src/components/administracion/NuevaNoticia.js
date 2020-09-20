@@ -174,9 +174,9 @@ const NuevaNoticia = (props) => {
             />
             <Form.Check
               type="radio"
-              label="Deporte"
+              label="Deportes"
               name="categoria"
-              value="deporte"
+              value="deportes"
               onChange={seleccionarCategoria}
             />
             <Form.Check

@@ -5,7 +5,7 @@
       "descripcionBreve": "Bocad",
       "descripcionDetallada": "sdsaddas asdasdsd asdasd sad",
       "imagenPrincipal": "http://www.planetabocajuniors.com.ar/wp-content/uploads/2020/09/ledesma2.jpg",
-      "categoria": "deporte",
+      "categoria": "deportes",
       "autor": "dadadadas",
       "principalPortada": "false",
       "principalCategoria": "true",
@@ -17,7 +17,7 @@
       "descripcionBreve": "final de ligaa",
       "descripcionDetallada": "Bboca ganoasdsad",
       "imagenPrincipal": "http://www.planetabocajuniors.com.ar/wp-content/uploads/2020/09/ledesma2.jpg",
-      "categoria": "deporte",
+      "categoria": "deportes",
       "autor": "ssdsdsd",
       "principalPortada": "false",
       "principalCategoria": "true",
@@ -159,7 +159,7 @@
     },
     {
       "agregarCategoria": "Deportes",
-      "descripcionCategoria": "noticias de deportes",
+      "descripcionCategoria": "Noticias referidas al mundo deportivo",
       "id": 6
     },
     {
