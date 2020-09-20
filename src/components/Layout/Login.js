@@ -1,105 +1,77 @@
-import React, { useState } from "react";
+import React, { Fragment } from "react";
 import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
+import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
-// import Link from "react-bootstrap/Link";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
+import "../../categorias.css";
+import { FaGoogle, FaFacebook } from "react-icons/fa";
 
 const Login = () => {
-  const [logg, setLogg] = useState({});
-  const [pass, setPass] = useState({});
-
-  const luciano = "luciano@gmail.com",
-    juand = "juand@gmail.com",
-    lucas = "lucas@gmail.com",
-    contraUserAdm = "rolling12";
-
-  // const mailVerif = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  // const passVerif = /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/;
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("desde el boton enviar");
-    // validar datos
-    if (logg === luciano || logg === juand || logg === lucas) {
-      console.log("todo ok");
-      setLogg(e.target.className="form-control is-valid");
-    } else {
-      console.log("todo no");
-      setLogg(e.target.className="form-control is-invalid")
-    }
-
-    if(pass === contraUserAdm){
-      console.log("contaseña ok")
-      setPass(e.target.className="form-control is-valid");
-    }else {
-      console.log("contaseña no")
-      setPass(e.target.className="form-control is-invalid");
-    }
-  };
-
   return (
-    <Col xs={12} lg={6} className="mx-auto my-5">
-      <Card className="border border-dark">
-        <Card.Header className="bg-dark">
-          <h5 className="text-light">Iniciar sesión</h5>
-        </Card.Header>
-        <Card.Body>
-          <h6 className="text-center">Con su red social</h6>
-          <div className="text-center">
-            <FaFacebook className="iconFB mx-1" size="50" />
-            <FaTwitter className="iconTW mx-1" size="50" />
-            <SiGmail className="iconGM mx-1" size="50" />
-          </div>
-          <hr className="lineaHR" />
-          <h6 className="text-center my-5">
-            O con su correo electrónico y contraseña de Rolling New
-          </h6>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Control
-                type="email"
-                placeholder="Correo electrónico *"
-                onChange={(e) => {
-                  setLogg(e.target.value);
-                }}
-              />
-            </Form.Group>
-            <Form.Group controlId="formBasicPassword">
-              <Form.Control
-                type="password"
-                placeholder="Contraseña *"
-                onChange={(e) => {
-                  // setPass(e.target.value)
-                  // setPass(e);
-                }}
-              />
-            </Form.Group>
-            <div className="d-flex justify-content-between mt-5">
-              <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Recordar mi cuenta" />
-              </Form.Group>
-              <Card.Link href="#">¿Olvidó su contraseña?</Card.Link>
-            </div>
-            <Button variant="primary" size="lg" block type="submit">
-              Ingresar
-            </Button>
-          </Form>
-          <hr className="lineaHR" />
-          <Button
-            className="mt-5"
-            variant="success"
-            size="lg"
-            block
-            type="submit"
-          >
-            Crear una nueva cuenta
-          </Button>
-        </Card.Body>
-      </Card>
-    </Col>
+    <div className="bg-login py-5">
+      <div className="container">
+        <div className="d-flex justify-content-center">
+          <Card className=" p-2">
+            <Card.Body>
+              <h5 className="titulo-card text-center">Ingresar</h5>
+              <hr></hr>
+              <Link
+                className="text-center naranja-rn"
+                exact={true}
+                to="/registro"
+              >
+                <p>
+                  <i>¿Todavia no tienes una cuenta? Registrate aqui</i>
+                </p>
+              </Link>
+              <Alert variant={'danger'}>
+                Todos los campos son obligatorios.
+              </Alert>
+              <Form>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>
+                    <b>Email</b>
+                  </Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="micorreo@dominio.com"
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formBasicPassword">
+                  <Form.Label>
+                    <b>Contraseña</b>
+                  </Form.Label>
+                  <Form.Control
+                    type="password"
+                    placeholder="Ingresa tu contraseña"
+                  />
+                </Form.Group>
+                <Button variant="primary" type="submit" className="btn-rn my-3">
+                  Ingresar
+                </Button>
+                <hr></hr>
+              </Form>
+              <div>
+                <Link
+                  className="btn btn-danger btn-block rounded-pill mt-4"
+                  to="/*"
+                >
+                  <FaGoogle /> &nbsp; Ingresar con Google
+                </Link>
+                <Link
+                  className="btn btn-primary btn-block rounded-pill my-4"
+                  to="/*"
+                >
+                  <FaFacebook /> &nbsp; Ingresar con Facebook
+                </Link>
+              </div>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
+    </div>
   );
 };
 
