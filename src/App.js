@@ -36,7 +36,7 @@ function App() {
     "actualidad",
     "deportes",
     "economia",
-    "espectaculo",
+    "espectaculos",
     "fotografia",
     "politica",
     "salud",
@@ -122,7 +122,7 @@ function App() {
         <Route exact path="/categorias/economia">
           <Economia categorias={categorias} noticias={noticias}></Economia>
         </Route>
-        <Route exact path="/categorias/espectaculo">
+        <Route exact path="/categorias/espectaculos">
           <Espectaculo
             categorias={categorias}
             noticias={noticias}

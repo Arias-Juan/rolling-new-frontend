@@ -129,10 +129,10 @@ const Header = () => {
               </NavLink>
               <NavLink
                 exact={true}
-                to="/categorias/espectaculo"
+                to="/categorias/espectaculos"
                 className="rn-nav-link mx-2"
               >
-                Espectaculo
+                Espectaculos
               </NavLink>
               <NavLink
                 exact={true}
