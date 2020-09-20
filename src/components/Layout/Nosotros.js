@@ -2,6 +2,12 @@ import React from "react";
 import { Card, Container, Col, CardColumns } from "react-bootstrap";
 import logoFooter from "../../img/Principal/logo-footer.svg";
 import imgPrueba from "../../img/Pruebas/banner-publicidad-01.jpg";
+import lucasM from "../../img/Pruebas/lucasM.jpg";
+import lucianoG from "../../img/Pruebas/lucianoG.jpg";
+import lucianaG from "../../img/Pruebas/lucianaG.jpg";
+import juanD from "../../img/Pruebas/juanD.jpg";
+import juanA from "../../img/Pruebas/juanA.jpg";
+
 import { GiPlainCircle } from "react-icons/gi";
 const Nosotros = () => {
     return (
@@ -81,17 +87,17 @@ const Nosotros = () => {
                         </article>
                         <CardColumns className="my-4">
                             <Card>
-                                <Card.Img variant="top" src={imgPrueba} />
-                                <Card.Body>
+                                <Card.Img variant="top" src={lucianaG} />
+                                <blockquote className="blockquote mb-0 card-body">
                                     <Card.Title>Luciana Ghidara</Card.Title>
                                     <Card.Text>
                                         This is a longer card with supporting text below as a natural lead-in to
                                         additional content. This content is a little bit longer.
                                     </Card.Text>
-                                </Card.Body>
+                                </blockquote>
                             </Card>
                             <Card className="p-3">
-                                <Card.Img variant="top" src={imgPrueba} />
+                                <Card.Img variant="top" src={juanA} />
                                 <blockquote className="blockquote mb-0 card-body">
                                     <Card.Title>Juan Arias</Card.Title>
                                     <Card.Text>
@@ -101,11 +107,11 @@ const Nosotros = () => {
                                 </blockquote>
                             </Card>
                             <Card>
-                                <Card.Img variant="top" src={imgPrueba} />
+                                <Card.Img variant="top" src={lucianoG} />
                                 <blockquote className="blockquote card-body">
                                     <Card.Title>Luciano N. Gramajo</Card.Title>
                                     <Card.Text>
-                                        Orgulloso de ser argentino, soltero y estudio programacion de software.
+                                        Orgulloso de ser argentino, soltero y estudio programacion de software en Rolling Code.
                                     </Card.Text>
                                 </blockquote>
                             </Card>
@@ -118,7 +124,7 @@ const Nosotros = () => {
                                 </blockquote>
                             </Card>
                             <Card className="text-center">
-                            <Card.Img variant="top" src={imgPrueba} />
+                            <Card.Img variant="top" src={juanD} />
                             <blockquote className="blockquote card-body">
                                     <Card.Title>Juan D'amichici</Card.Title>
                                     <Card.Text>
@@ -127,12 +133,12 @@ const Nosotros = () => {
 
                                 </blockquote>
                             </Card>
-                            <Card className="text-right">
-                                <Card.Img src={imgPrueba} />
+                            <Card>
+                                <Card.Img src={lucasM} />
                                 <blockquote className="blockquote mb-0 card-body">
                                     <Card.Title>Lucas Martinez</Card.Title>
                                     <Card.Text>
-                                        This card has supporting text below as a natural lead-in to additional content.{' '}
+                                    Lucas es estudiante de diseño y aprendio a programar paginas web en Rolling. Le gusta trabajar con musica techno a todo volumen y hacer breaks jugando al Valorant (no es muy bueno pero le pone actitud).
                                     </Card.Text>
                                 </blockquote>
                             </Card>
