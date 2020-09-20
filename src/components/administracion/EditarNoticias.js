@@ -153,11 +153,11 @@ const EditarNoticias = (props) => {
               />
               <Form.Check
                 type="radio"
-                label="Deporte"
+                label="Deportes"
                 name="categoria"
-                value="deporte"
+                value="deportes"
                 onChange={seleccionarCategoria}
-                defaultChecked={props.noticia.categoria === "deporte"}
+                defaultChecked={props.noticia.categoria === "deportes"}
               />
               <Form.Check
                 type="radio"
@@ -169,11 +169,11 @@ const EditarNoticias = (props) => {
               />
               <Form.Check
                 type="radio"
-                label="Espectaculo"
+                label="Espectaculos"
                 name="categoria"
-                value="espectaculo"
+                value="espectaculos"
                 onChange={seleccionarCategoria}
-                defaultChecked={props.noticia.categoria === "espectaculo"}
+                defaultChecked={props.noticia.categoria === "espectaculos"}
               />
               <Form.Check
                 type="radio"

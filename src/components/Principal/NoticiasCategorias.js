@@ -15,10 +15,10 @@ const NoticiasCategorias = (props) => {
     const noticias = props.noticiasSwiper.filter((itemNoticia) => {
         return (itemNoticia.categoria) === props.itemCategoria.agregarCategoria.toLowerCase()
     })
-
+    
     return (
         <div className="mb-3">
-            <Link exact={true} to="/*" className="text-decoration-none">
+            <Link exact={true} to={`/categorias/${props.itemCategoria.agregarCategoria.toLowerCase()}`} className="text-decoration-none">
                 <h4 className="titulo-categoria card-titulo">{props.itemCategoria.agregarCategoria}</h4>
             </Link>
             <hr className="bg-dark"></hr>

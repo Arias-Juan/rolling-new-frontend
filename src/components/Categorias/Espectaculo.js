@@ -6,11 +6,11 @@ import PublicidadH from "../common/PublicidadH";
 const Espectaculo = (props) => {
 
   const noticiasEspectaculo = props.noticias.filter((itemNoticia) => {
-    return itemNoticia.categoria === "espectaculo";
+    return itemNoticia.categoria === "espectaculos";
   });
 
   const portada = props.noticias.filter((itemNoticia) => {
-    return (itemNoticia.principalCategoria === "true" && itemNoticia.categoria === "espectaculo");
+    return (itemNoticia.principalCategoria === "true" && itemNoticia.categoria === "espectaculos");
   });
 
   //console.log(noticiasEspectaculo);
@@ -24,6 +24,7 @@ const Espectaculo = (props) => {
         </div>
         <hr></hr>
         <Body noticias={noticiasEspectaculo}></Body>
+        
       </div>
     );
 };

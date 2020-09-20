@@ -34,9 +34,9 @@ function App() {
   //creamos un arreglo con las categorias
   const _categorias = [
     "actualidad",
-    "deporte",
+    "deportes",
     "economia",
-    "espectaculo",
+    "espectaculos",
     "fotografia",
     "politica",
     "salud",
@@ -116,13 +116,13 @@ function App() {
         <Route exact path="/categorias/actualidad">
           <Actualidad categorias={categorias} noticias={noticias}></Actualidad>
         </Route>
-        <Route exact path="/categorias/deporte">
+        <Route exact path="/categorias/deportes">
           <Deporte categorias={categorias} noticias={noticias}></Deporte>
         </Route>
         <Route exact path="/categorias/economia">
           <Economia categorias={categorias} noticias={noticias}></Economia>
         </Route>
-        <Route exact path="/categorias/espectaculo">
+        <Route exact path="/categorias/espectaculos">
           <Espectaculo
             categorias={categorias}
             noticias={noticias}

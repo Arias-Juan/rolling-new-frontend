@@ -16,9 +16,9 @@ const Fotografia = (props) => {
     return itemNoticia.categoria === "fotografia";
   });
 
-  const portada = props.noticias.filter((itemNoticia) => {
+  /*const portada = props.noticias.filter((itemNoticia) => {
     return (itemNoticia.principalCategoria === "true" && itemNoticia.categoria === "fotografia");
-  });
+  });*/
 
   console.log(noticiasFotografia);
 
