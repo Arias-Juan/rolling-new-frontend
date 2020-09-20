@@ -13,7 +13,7 @@ const ListaCategoria = (props) => {
           {props.categoriaNuevas.map((itemCategoria) => (
             <Categorias key={itemCategoria.id} categoriaItem={itemCategoria}
               setRecargarCategoria={props.setRecargarCategoria}></Categorias>
-          ))}
+          )).reverse()}
         </ListGroup>
       </section>
     </Fragment>

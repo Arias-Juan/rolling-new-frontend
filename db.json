@@ -1,23 +1,27 @@
 {
   "noticia": [
     {
-      "tituloNoticia": "boca campeon del mundo",
-      "descripcionBreve": "boca",
-      "descripcionDetallada": "dadsdadad",
-      "imagenPrincipal": "daddad",
-      "categoria": "deportes",
-      "autor": "dadadada",
-      "fecha": "1111111",
+      "tituloNoticia": "Boca campeon del mundo",
+      "descripcionBreve": "Bocad",
+      "descripcionDetallada": "sdsaddas asdasdsd asdasd sad",
+      "imagenPrincipal": "http://www.planetabocajuniors.com.ar/wp-content/uploads/2020/09/ledesma2.jpg",
+      "categoria": "deporte",
+      "autor": "dadadadas",
+      "principalPortada": "false",
+      "principalCategoria": "true",
+      "fecha": "1111111d",
       "id": 12
     },
     {
-      "tituloNoticia": "boca",
-      "descripcionBreve": "final de liga",
-      "descripcionDetallada": "boca gano",
-      "imagenPrincipal": "222",
-      "categoria": "deportes",
-      "autor": "ssdsd",
-      "fecha": "22222",
+      "tituloNoticia": "Bocassd",
+      "descripcionBreve": "final de ligaa",
+      "descripcionDetallada": "Bboca ganoasdsad",
+      "imagenPrincipal": "http://www.planetabocajuniors.com.ar/wp-content/uploads/2020/09/ledesma2.jpg",
+      "categoria": "deporte",
+      "autor": "ssdsdsd",
+      "principalPortada": "false",
+      "principalCategoria": "true",
+      "fecha": "22222s",
       "id": 13
     },
     {
@@ -116,14 +120,14 @@
     },
     {
       "tituloNoticia": "La casa histórica en 1868",
-      "categoria": "fotografia",
       "descripcionBreve": "Antigua fachada de la casa histórica de Tucumán",
       "descripcionDetallada": "La Casa de Tucumán o Casa Histórica de la Independencia es una casa colonial localizada en el centro de la ciudad argentina de San Miguel de Tucumán, donde un cuerpo de delegados de la mayoría de las Provincias Unidas del Río de la Plata, conocido como el Congreso de Tucumán, proclamó la declaración de independencia de la Argentina, el 9 de julio de 1816. Fue declarada Monumento Histórico Nacional en 1941.\n\nLa casa es hoy el museo, llamado oficialmente Museo casa Histórica de la Independencia.",
       "imagenPrincipal": "https://i.pinimg.com/originals/31/82/b7/3182b7ef39f43d42dd9d8da97c7f3529.jpg",
+      "categoria": "fotografia",
       "autor": "Aasd",
-      "fecha": "17/07/2020",
-      "principalPortada": "true",
+      "principalPortada": "false",
       "principalCategoria": "true",
+      "fecha": "17/07/2020",
       "id": 22
     }
   ],
