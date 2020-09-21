@@ -13,8 +13,8 @@ const Nosotros = () => {
     return (
         <div>
             <Container>
-                <Card className="my-3">
-                    <Card.Header className="bg-dark text-right">
+                <Card className="my-5">
+                    <Card.Header className="bg-login text-right">
                         <img src={logoFooter} width="40%" alt="React Bootstrap logo" />
                     </Card.Header>
                     <Card.Body >

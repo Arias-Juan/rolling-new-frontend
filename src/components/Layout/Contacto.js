@@ -38,7 +38,7 @@ const Contacto = () => {
         }
     };
     return (
-        <Container>
+        <Container className="my-5">
             <Card>
                 <Card.Header variant="dark">
                     <h2>Contactanos</h2>

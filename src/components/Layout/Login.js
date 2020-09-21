@@ -12,7 +12,7 @@ const Login = () => {
     <div className="bg-login py-5">
       <div className="container">
         <div className="d-flex justify-content-center">
-          <Card className=" p-2">
+          <Card className="shadow p-2">
             <Card.Body>
               <h5 className="titulo-card text-center">Ingresar</h5>
               <hr></hr>
