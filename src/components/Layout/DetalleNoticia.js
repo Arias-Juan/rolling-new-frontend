@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import PublicidadH from "../common/PublicidadH";
 import publicidad from "../../img/Pruebas/publicidad-02.jpg";
 import { withRouter } from "react-router-dom";
+import { FacebookProvider, Comments } from 'react-facebook';
+
 
 const DetalleNoticia = (props) => {
   return (
@@ -49,6 +51,15 @@ const DetalleNoticia = (props) => {
           <hr></hr>
           <PublicidadH></PublicidadH>
           <hr></hr>
+          {/* {Comentarios} */}
+          <section>
+            <h3>Comentarios:</h3>
+            <FacebookProvider appId="817116249025293">
+              {/* {Al momento de subirla debe ser modificado por URL de Netlify} */}
+              <Comments href={`http://localhost:3000//noticias/detalle/${props.noticias.id}`} />
+            </FacebookProvider>
+          </section>
+          <hr></hr>
         </Col>
         <Col md={3} className="my-5">
           <Card style={{ width: "21rem" }} className="ml-auto">
@@ -56,20 +67,22 @@ const DetalleNoticia = (props) => {
               <Card.Title className="color-naranja titulo-card">
                 Mas de {props.noticias.categoria}
               </Card.Title>
-              {props.categorias.map((itemNoticia) => (
-                <Card.Text>
-                  <h5 className="color-naranja mt-4">
-                    <Link
-                      className="card-texto text-decoration-none"
-                      exact={true}
-                      to={`/noticias/detalle/${itemNoticia.id}`}
-                    >
-                      {itemNoticia.tituloNoticia}
-                    </Link>
-                  </h5>
-                  <hr></hr>
-                </Card.Text>
-              )).slice(0,5)}
+              {props.categorias
+                .map((itemNoticia) => (
+                  <Card.Text>
+                    <h5 className="color-naranja mt-4">
+                      <Link
+                        className="card-texto text-decoration-none"
+                        exact={true}
+                        to={`/noticias/detalle/${itemNoticia.id}`}
+                      >
+                        {itemNoticia.tituloNoticia}
+                      </Link>
+                    </h5>
+                    <hr></hr>
+                  </Card.Text>
+                ))
+                .slice(0, 5)}
             </Card.Body>
           </Card>
           <Card style={{ width: "21rem" }} className="mt-4 py-3">
