@@ -1,6 +1,11 @@
 .body {
   font-family: "Open Sans", sans-serif;
 }
+
+.nb-margin{
+  margin: 71.55px;
+}
+
 .btn-rn-outline {
   border: 1.2px solid #ff5e1f;
   border-radius: 50%;
