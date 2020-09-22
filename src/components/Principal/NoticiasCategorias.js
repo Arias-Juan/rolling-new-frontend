@@ -69,7 +69,7 @@ const NoticiasCategorias = (props) => {
                 }}
             >
                 {noticias.map((divNoticia) => (
-                    <SwiperSlide><CardCategoria key={divNoticia.id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
+                    <SwiperSlide><CardCategoria key={divNoticia._id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
             </Swiper>
         </div>
     );

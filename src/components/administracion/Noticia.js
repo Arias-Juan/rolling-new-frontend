@@ -27,7 +27,7 @@ const Noticia = (props) => {
       if (result.value) {
         //aqui tengo que eliminar el producto
         try {
-          const resultado = await fetch(`http://localhost:4000/noticia/${_id}`, {
+          const resultado = await fetch(`http://localhost:4000/api/rn/${_id}`, {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json",

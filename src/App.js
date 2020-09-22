@@ -59,7 +59,7 @@ function App() {
   const consultarAPI = async () => {
     try {
       // obtengo la lista de noticias
-      const consulta = await fetch("http://localhost:4000/noticia");
+      const consulta = await fetch("http://localhost:4000/api/rn");
       //console.log(consulta);
       const respuesta = await consulta.json();
       //console.log(respuesta);
@@ -157,7 +157,7 @@ function App() {
           render={(props) => {
             // codigo a ejecutar antes de renderizar el componente
             // obtengo el id de la lista
-            const idNoticia = parseInt(props.match.params._id);
+            const idNoticia = props.match.params._id;
             console.log(idNoticia);
             // buscar el producto que coincida con el id
             const noticiaSelecionada = noticias.find(
@@ -193,7 +193,7 @@ function App() {
           render={(props) => {
             // codigo a ejecutar antes de renderizar el componente
             // obtengo el id de la lista
-            const idCategoria = parseInt(props.match.params._id);
+            const idCategoria = props.match.params._id;
             console.log(idCategoria);
             // buscar el producto que coincida con el id
             const categoriaSelecionada = categoriaNuevas.find(
@@ -223,7 +223,7 @@ function App() {
           path="/noticias/detalle/:_id"
           render={(props) => {
             //obtener el id de la ruta..
-            const idNoticia = parseInt(props.match.params._id);
+            const idNoticia = props.match.params._id;
             console.log(idNoticia);
             const noticiaSeleccionada = noticias.find(
               (itemNoticia) => itemNoticia._id === idNoticia

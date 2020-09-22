@@ -8,11 +8,11 @@ const HCard = (props) => {
     <Card className="card-hover">
       {props.noticias.map((itemNoticia) => {
         return (
-          <Link className="text-decoration-none" exact={true} to={`noticias/detalle/${itemNoticia.id}`}>
+          <Link className="text-decoration-none" exact={true} to={`noticias/detalle/${itemNoticia._id}`}>
             <Card.Img variant="top" src={itemNoticia.imagenPrincipal} />
             <Card.Body>
               <Card.Title>
-                <Link exact={true} to={`noticias/detalle/${itemNoticia.id}`} className="card-titulo">
+                <Link exact={true} to={`noticias/detalle/${itemNoticia._id}`} className="card-titulo">
                   {itemNoticia.tituloNoticia}
                 </Link>
               </Card.Title>
