@@ -6,6 +6,10 @@ import Swal from "sweetalert2";
 import { withRouter } from "react-router-dom";
 import NavbarAdmin from "./common/NavbarAdmin";
 import Jumbotron from "react-bootstrap/Jumbotron";
+//editor de texto
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 
 const NuevaNoticia = (props) => {
   // me creo mis state
@@ -114,6 +118,23 @@ const NuevaNoticia = (props) => {
     }
   };
 
+  //editor de texto
+  NuevaNoticia.modules = {
+        toolbar: [
+          [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
+          [{size: []}],
+          ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+          [{'list': 'ordered'}, {'list': 'bullet'}, 
+           {'indent': '-1'}, {'indent': '+1'}],
+          ['link', 'image', 'video'],
+          ['clean']
+        ],
+        clipboard: {
+          // toggle to add extra line breaks when pasting HTML:
+          matchVisual: false,
+        }
+      }
+
   return (
     <Fragment>
       <NavbarAdmin></NavbarAdmin>
@@ -147,12 +168,13 @@ const NuevaNoticia = (props) => {
               <Form.Label className="font-weight-bold">
                 Descripcion detallada
               </Form.Label>
-              <Form.Control
+              {/* <Form.Control
                 type="text"
                 placeholder=" Ej: boca gano 2 a 0"
                 name="descripcion detallada"
                 onChange={(e) => setDescripcionDetallada(e.target.value)}
-              />
+              /> */}
+              <ReactQuill theme="snow" descripcionDetallada={descripcionDetallada} onChange={setDescripcionDetallada} modules={NuevaNoticia.modules} />
             </Form.Group>
             <Form.Group>
               <Form.Label className="font-weight-bold">
