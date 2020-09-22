@@ -27,7 +27,7 @@ const Fotografia = (props) => {
   const [idFoto, setIdFoto] = useState(0);
 
   const noticiaModal = noticiasFotografia.find((itemNoticia) => {
-    return (itemNoticia.id === idFoto)
+    return (itemNoticia._id === idFoto)
   })
 
   console.log(noticiaModal)
@@ -48,7 +48,7 @@ const Fotografia = (props) => {
           {noticiasFotografia.map((itemNoticiaFotografia) =>
             <Col xs={12} md={6} lg={4} className="p-0 m-0">
               <div>
-                <Link onMouseOver={() => setIdFoto(itemNoticiaFotografia.id)} onClick={() => setShow(true)}>
+                <Link onMouseOver={() => setIdFoto(itemNoticiaFotografia._id)} onClick={() => setShow(true)}>
                   <img src={itemNoticiaFotografia.imagenPrincipal} alt={itemNoticiaFotografia.descripcionBreve} className="w-100 p-1"></img>
                 </Link>
               </div>

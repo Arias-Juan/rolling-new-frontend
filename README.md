@@ -1,8 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue creado por la Comision 1A de Rolling Code School https://rollingcodeschool.com/
 
-## Available Scripts
 
-In the project directory, you can run:
+## Scripts disponibles
 
 ### `npm start`
 

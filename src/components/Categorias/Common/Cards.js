@@ -8,7 +8,7 @@ const Cards = (props) => {
   return (
     <Link
       exact={true}
-      to={`/noticias/detalle/${props.noticias.id}`}
+      to={`/noticias/detalle/${props.noticias._id}`}
       className="text-decoration-none card-hover"
     >
       <div>

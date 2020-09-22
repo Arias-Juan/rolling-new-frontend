@@ -11,7 +11,7 @@ const ListaCategoria = (props) => {
         <h2 className="text-center py-3">Lista de Categorias</h2>
         <ListGroup className="mb-5">
           {props.categoriaNuevas.map((itemCategoria) => (
-            <Categorias key={itemCategoria.id} categoriaItem={itemCategoria}
+            <Categorias key={itemCategoria._id} categoriaItem={itemCategoria}
               setRecargarCategoria={props.setRecargarCategoria}></Categorias>
           )).reverse()}
         </ListGroup>

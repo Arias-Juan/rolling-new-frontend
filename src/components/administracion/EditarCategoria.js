@@ -37,7 +37,7 @@ const EditarCategoria = (props) => {
     }
     //envio los cambios a la api
     try {
-      const respuesta = await fetch(`http://localhost:4000/categoria/${props.Categoria.id}`, {
+      const respuesta = await fetch(`http://localhost:4000/categoria/${props.Categoria._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"

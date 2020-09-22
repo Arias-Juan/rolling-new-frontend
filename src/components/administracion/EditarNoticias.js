@@ -53,7 +53,7 @@ const [error, setError] = useState(false);
       }
       //envio los cambios a la api
       try{
-        const respuesta = await fetch(`http://localhost:4000/noticia/${props.noticia.id}`, {
+        const respuesta = await fetch(`http://localhost:4000/noticia/${props.noticia._id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
