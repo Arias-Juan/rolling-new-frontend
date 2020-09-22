@@ -59,7 +59,7 @@ function App() {
   const consultarAPI = async () => {
     try {
       // obtengo la lista de noticias
-      const consulta = await fetch("http://localhost:4000/noticia");
+      const consulta = await fetch("http://localhost:4000/api/rn");
       //console.log(consulta);
       const respuesta = await consulta.json();
       //console.log(respuesta);
@@ -153,15 +153,15 @@ function App() {
         </Route>
         <Route
           exact
-          path="/noticias/editar/:id"
+          path="/noticias/editar/:_id"
           render={(props) => {
             // codigo a ejecutar antes de renderizar el componente
             // obtengo el id de la lista
-            const idNoticia = parseInt(props.match.params.id);
+            const idNoticia = props.match.params._id;
             console.log(idNoticia);
             // buscar el producto que coincida con el id
             const noticiaSelecionada = noticias.find(
-              (noticia) => noticia.id === idNoticia
+              (noticia) => noticia._id === idNoticia
             );
             console.log(noticiaSelecionada);
             // muestro el componente editarNoticias
@@ -189,15 +189,15 @@ function App() {
         </Route>
         <Route
           exact
-          path="/administracion/editarCategoria/:id"
+          path="/administracion/editarCategoria/:_id"
           render={(props) => {
             // codigo a ejecutar antes de renderizar el componente
             // obtengo el id de la lista
-            const idCategoria = parseInt(props.match.params.id);
+            const idCategoria = props.match.params._id;
             console.log(idCategoria);
             // buscar el producto que coincida con el id
             const categoriaSelecionada = categoriaNuevas.find(
-              (ccategoria) => ccategoria.id === idCategoria
+              (ccategoria) => ccategoria._id === idCategoria
             );
             console.log(categoriaSelecionada);
             // muestro el componente editarNoticias
@@ -220,13 +220,13 @@ function App() {
         </Route>
         <Route
           exact
-          path="/noticias/detalle/:id"
+          path="/noticias/detalle/:_id"
           render={(props) => {
             //obtener el id de la ruta..
-            const idNoticia = parseInt(props.match.params.id);
+            const idNoticia = props.match.params._id;
             console.log(idNoticia);
             const noticiaSeleccionada = noticias.find(
-              (itemNoticia) => itemNoticia.id === idNoticia
+              (itemNoticia) => itemNoticia._id === idNoticia
             );
             const categoriaSeleccionada = noticias.filter(
               (itemNoticia) => itemNoticia.categoria === noticiaSeleccionada.categoria

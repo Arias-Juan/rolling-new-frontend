@@ -12,7 +12,7 @@ const ListaNoticias = (props) => {
       <h2 className="text-center py-3">Lista de Noticias</h2>
       <ListGroup className="mb-5">
       {props.noticias.map((itemNoticia) => (
-        <Noticia key={itemNoticia.id} noticiaItem={itemNoticia} 
+        <Noticia key={itemNoticia._id} noticiaItem={itemNoticia} 
         setRecargarNoticias={props.setRecargarNoticias}></Noticia>
       )).reverse()}
       
