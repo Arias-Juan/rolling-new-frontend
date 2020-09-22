@@ -81,12 +81,13 @@ const Header = () => {
   return (
     <Fragment>
       <Navbar bg="light" expand="lg">
-        <Container>
+        <Container className="divNavbar">
           <NavLink exact={true} to="/" className="mr-2">
             <img
               src={logoEncabezado}
               width="200rem"
               alt="React Bootstrap logo"
+              className="logoEncabezado"
             />
           </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -170,6 +171,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>

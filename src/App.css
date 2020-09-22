@@ -204,6 +204,21 @@ div .cardCategoria {
   }
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1025px) {
+  .logoEncabezado{
+    object-fit: scale-down; 
+  max-height: 600px;
+  max-width: 150px;
+  }
+
+  .divNavbar{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+
 /* Dispositivos medianos */
 @media only screen and (min-width: 500px) and (max-width: 768px) {
   .divisas {

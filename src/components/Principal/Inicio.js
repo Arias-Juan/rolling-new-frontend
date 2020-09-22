@@ -4,7 +4,8 @@ import UltimasNoticias from './UltimasNoticias'
 import ApiClima from './ApiClima';
 import NoticiasCategorias from './NoticiasCategorias';
 import BannerCovid from './BannerCovid';
-import Patrocinadores from './Patrocinadores'
+import BannerCovidSM from './BannerCovidSM';
+import Patrocinadores from './Patrocinadores';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -42,15 +43,16 @@ const Inicio = (props) => {
       </div>
 
       <BannerCovid></BannerCovid>
+      <BannerCovidSM></BannerCovidSM>
 
       <div className="p-3 my-3">
         <Container fluid>
           <Row className="d-flex justify-content-around">
-            <Col xs={8} className="p-0">
+            <Col xs={12} sm={9} className="p-0">
               {props.categoriaNuevas.map((itemCategoria) => <NoticiasCategorias key={itemCategoria.id} itemCategoria={itemCategoria} noticiasSwiper={noticiasSwiperCategorias}>
               </NoticiasCategorias>)}
             </Col>
-            <Col xs={3} lg={2} className="p-0">
+            <Col xs={3} sm={2} lg={2} className="p-0">
               <Patrocinadores></Patrocinadores>
             </Col>
           </Row>
