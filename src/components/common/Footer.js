@@ -11,8 +11,6 @@ import { MdEmail } from "react-icons/md";
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaGoogle } from "react-icons/fa";
 import "../../App.css";
 import { Link } from "react-router-dom";
-import logoFooter from "../../img/Principal/logo-footer.svg";
-import logoEncabezado from "../../img/Principal/logo-encabezado.svg";
 
 const Footer = () => {
 //ventana modal...
@@ -110,7 +108,7 @@ const handleSubmit = (e) => {
               <Col sm={12} md={3}>
                 <img
                   className="logo-footer"
-                  src={logoFooter}
+                  src={`${process.env.PUBLIC_URL}img/Principal/logo-footer.svg`}
                   width="200rem"
                   alt="rollingNews logo"
                 />
@@ -251,7 +249,7 @@ const handleSubmit = (e) => {
         <Modal.Header closeButton>
           <Modal.Title>
             <img
-              src={logoEncabezado}
+              src={`${process.env.PUBLIC_URL}img/Principal/logo-encabezado.svg`}
               width="200rem"
               alt="React Bootstrap logo"
             />

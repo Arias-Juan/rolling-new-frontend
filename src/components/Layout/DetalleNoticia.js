@@ -56,7 +56,7 @@ const DetalleNoticia = (props) => {
             <h3>Comentarios:</h3>
             <FacebookProvider appId="817116249025293">
               {/* {Al momento de subirla debe ser modificado por URL de Netlify} */}
-              <Comments href={`http://localhost:3000//noticias/detalle/${props.noticias._id}`} />
+              <Comments href={`https://rollingnewsbc.herokuapp.com/noticias/detalle/${props.noticias._id}`} />
             </FacebookProvider>
           </section>
           <hr></hr>

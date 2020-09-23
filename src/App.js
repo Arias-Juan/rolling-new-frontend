@@ -59,7 +59,7 @@ function App() {
   const consultarAPI = async () => {
     try {
       // obtengo la lista de noticias
-      const consulta = await fetch("http://localhost:4000/api/rn");
+      const consulta = await fetch("https://rollingnewsbc.herokuapp.com/api/rn");
       //console.log(consulta);
       const respuesta = await consulta.json();
       //console.log(respuesta);
@@ -85,7 +85,7 @@ function App() {
   const consultarCategoriaAPI = async () => {
     try {
       // obtengo la lista de noticias
-      const consultar = await fetch("http://localhost:4000/categoria");
+      const consultar = await fetch("https://rollingnewsbc.herokuapp.com/categoria");
       //console.log(consultar);
       const respuestas = await consultar.json();
       //console.log(respuestas);

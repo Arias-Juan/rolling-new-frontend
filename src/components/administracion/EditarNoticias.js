@@ -92,7 +92,7 @@ const EditarNoticias = (props) => {
     }
     //envio los cambios a la api
     try {
-      const respuesta = await fetch(`http://localhost:4000/api/rn/${props.noticia._id}`, {
+      const respuesta = await fetch(`https://rollingnewsbc.herokuapp.com/api/rn/${props.noticia._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
