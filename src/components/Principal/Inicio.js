@@ -13,7 +13,7 @@ import Col from 'react-bootstrap/Col'
 
 const Inicio = (props) => {
   
-  //console.log(props.categoriaNuevas) //
+  console.log(props) 
   const portada = props.noticias.filter((itemNoticia) => {
     return (itemNoticia.principalPortada === "true");
   });
@@ -49,7 +49,7 @@ const Inicio = (props) => {
         <Container fluid>
           <Row className="d-flex justify-content-around">
             <Col xs={12} sm={9} className="p-0">
-              {props.categoriaNuevas.map((itemCategoria) => <NoticiasCategorias key={itemCategoria._id} itemCategoria={itemCategoria} noticiasSwiper={noticiasSwiperCategorias}>
+              {props.categorias.map((itemCategoria) => <NoticiasCategorias key={itemCategoria._id} itemCategoria={itemCategoria} noticiasSwiper={noticiasSwiperCategorias}>
               </NoticiasCategorias>)}
             </Col>
             <Col xs={3} sm={2} lg={2} className="p-0">

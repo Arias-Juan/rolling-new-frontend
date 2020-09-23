@@ -110,7 +110,7 @@ function App() {
         <Route exact path="/">
           <Inicio
             noticias={noticias}
-            categoriaNuevas={categoriaNuevas}
+            categorias={categorias}
           ></Inicio>
         </Route>
         <Route exact path="/categorias/actualidad">
