@@ -13,13 +13,15 @@ SwiperCore.use([Navigation, A11y, EffectFade]);
 
 const NoticiasCategorias = (props) => {
     const noticias = props.noticiasSwiper.filter((itemNoticia) => {
-        return (itemNoticia.categoria) === props.itemCategoria.agregarCategoria.toLowerCase()
+        return (itemNoticia.categoria) === props.itemCategoria
     })
+    console.log(props.noticiasSwiper)
+    console.log(props.itemCategoria)
     
     return (
         <div className="mb-3">
-            <Link exact={true} to={`/categorias/${props.itemCategoria.agregarCategoria.toLowerCase()}`} className="text-decoration-none">
-                <h4 className="titulo-categoria card-titulo">{props.itemCategoria.agregarCategoria}</h4>
+            <Link exact={true} to={`/categorias/${props.itemCategoria}`} className="text-decoration-none">
+                <h4 className="titulo-categoria card-titulo">{props.itemCategoria}</h4>
             </Link>
             <hr className="bg-dark"></hr>
 

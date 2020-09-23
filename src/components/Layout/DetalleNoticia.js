@@ -20,11 +20,11 @@ const DetalleNoticia = (props) => {
         <Col sm={12} md={9}>
           <section className="mt-3 mb-5">
             <div>
-              <Link exact={true} to="/*">
+              
                 <h4>
                   <Badge className="badge-rn">{props.noticias.categoria}</Badge>
                 </h4>
-              </Link>
+              
             </div>
             <h1 className="titulo-detalle text-dark">
               {props.noticias.tituloNoticia}
