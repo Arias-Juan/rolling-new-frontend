@@ -101,13 +101,13 @@
 }
 
 .card-texto{
-    color: black;
+    color: #000000;
     opacity: 80%;
     font-weight: 500;
 }
 
 .card-texto:hover{
-    color: black;
+    color: #000000;
     opacity: 100%;
     font-weight: 500;
 }
