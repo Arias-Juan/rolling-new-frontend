@@ -15,8 +15,8 @@ const NoticiasCategorias = (props) => {
     const noticias = props.noticiasSwiper.filter((itemNoticia) => {
         return (itemNoticia.categoria) === props.itemCategoria
     })
-    console.log(props.noticiasSwiper)
-    console.log(props.itemCategoria)
+    //console.log(props.noticiasSwiper)
+    //console.log(props.itemCategoria)
     
     return (
         <div className="mb-3">
