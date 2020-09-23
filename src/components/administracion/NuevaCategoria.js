@@ -104,7 +104,7 @@ const NuevaCategoria = (props) => {
               onChange={(e) => setDescripcionCategoria(e.target.value)}
             />
           </Form.Group>
-          <Button variant="success" type="submit" className="w-100 my-5">
+          <Button disabled variant="success" type="submit" className="w-100 my-5">
             Guardar Categoria
           </Button>
         </Form>

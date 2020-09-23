@@ -66,6 +66,7 @@ const Categorias = (props) => {
     });
   };
 
+  console.log(props)
   return (
     <article>
       <ListGroup.Item>
@@ -74,21 +75,22 @@ const Categorias = (props) => {
             <Col sm={8} className="d-flex justify-content-start">
               <p>
                 <span className="font-weight-bold">
-                  {props.categoriaItem.agregarCategoria}: {}
+                  {props.categoriaItem.toUpperCase()}
                 </span>
-                {props.categoriaItem.descripcionCategoria}
+
               </p>
             </Col>
             <Col sm={4} className="d-flex justify-content-end">
               <ButtonGroup>
-                <Link
+                <Button disabled
                   className="btn btn-success rounded-pill mr-2"
                   to={`/administracion/editarCategoria/${props.categoriaItem._id}`}
                 >
                   <FontAwesomeIcon size="sm" icon={faEdit}></FontAwesomeIcon>
                   Editar
-                </Link>
+                </Button>
                 <Button
+                  disabled
                   className="btn btn-danger rounded-pill mr-2"
                   type="button"
                   onClick={() => eliminarCategoria(props.categoriaItem._id)}

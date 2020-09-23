@@ -178,7 +178,7 @@ const Header = () => {
               <img
                 src={`${process.env.PUBLIC_URL}img/Principal/logo-encabezado.svg`}
                 width="200rem"
-                alt="React Bootstrap logo"
+                alt="Logo encabezado"
               />
             </Modal.Title>
           </Modal.Header>
