@@ -138,6 +138,7 @@ const NuevaNoticia = (props) => {
               </Form.Label>
               <Form.Control
                 type="text"
+                maxlength="150"
                 placeholder="Ej: boca campeon"
                 name="descripcion breve"
                 onChange={(e) => setDescripcionBreve(e.target.value)}
