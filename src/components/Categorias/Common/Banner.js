@@ -20,7 +20,7 @@ const Banner = (props) => {
                   alt={itemNoticia.tituloNoticia}
                 />
                 <Carousel.Caption>
-                  <Link exact={true} to={`/noticias/detalle/${itemNoticia.id}`} className="text-decoration-none">
+                  <Link exact={true} to={`/noticias/detalle/${itemNoticia._id}`} className="text-decoration-none">
                     <h2 className="titulo-carousel">{itemNoticia.tituloNoticia}</h2>
                   </Link>
                 </Carousel.Caption>
@@ -41,7 +41,7 @@ const Banner = (props) => {
                   alt={itemNoticia.tituloNoticia}
                 />
                 <Carousel.Caption>
-                  <Link exact={true} to={`/noticias/detalle/${itemNoticia.id}`} className="text-decoration-none">
+                  <Link exact={true} to={`/noticias/detalle/${itemNoticia._id}`} className="text-decoration-none">
                     <h2 className="titulo-carousel-sm">{itemNoticia.tituloNoticia}</h2>
                   </Link>
                 </Carousel.Caption>

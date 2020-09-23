@@ -11,8 +11,8 @@ import Row from "react-bootstrap/Row";
 
 
 const Noticia = (props) => {
-  const eliminarNoticia = (id) => {
-    console.log(id);
+  const eliminarNoticia = (_id) => {
+    console.log(_id);
 
     Swal.fire({
       title: "¿Estas seguro de eliminar esta noticia?",
@@ -27,7 +27,7 @@ const Noticia = (props) => {
       if (result.value) {
         //aqui tengo que eliminar el producto
         try {
-          const resultado = await fetch(`http://localhost:4000/noticia/${id}`, {
+          const resultado = await fetch(`http://localhost:4000/api/rn/${_id}`, {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json",
@@ -74,7 +74,7 @@ const Noticia = (props) => {
             <ButtonGroup>
               <Link
                 className="btn btn-success rounded-pill mr-2"
-                to={`/noticias/editar/${props.noticiaItem.id}`}
+                to={`/noticias/editar/${props.noticiaItem._id}`}
               >
                 <FontAwesomeIcon
                   icon={faEdit}
@@ -85,7 +85,7 @@ const Noticia = (props) => {
               <Button
                 className="btn btn-danger rounded-pill py-2"
                 type="button"
-                onClick={() => eliminarNoticia(props.noticiaItem.id)}
+                onClick={() => eliminarNoticia(props.noticiaItem._id)}
               >
                 <FontAwesomeIcon
                   icon={faTrash}

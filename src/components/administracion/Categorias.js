@@ -11,10 +11,11 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
+import Noticia from "./Noticia";
 
 const Categorias = (props) => {
-  const eliminarCategoria = (id) => {
-    console.log(id);
+  const eliminarCategoria = (_id) => {
+    console.log(_id);
 
     Swal.fire({
       title: "¿Estas seguro de eliminar esta categoria?",
@@ -30,7 +31,7 @@ const Categorias = (props) => {
         //aqui tengo que eliminar el producto
         try {
           const resultado = await fetch(
-            `http://localhost:4000/categoria/${id}`,
+            `http://localhost:4000/categoria/${_id}`,
             {
               method: "DELETE",
               headers: {
@@ -64,6 +65,7 @@ const Categorias = (props) => {
       }
     });
   };
+
   return (
     <article>
       <ListGroup.Item>
@@ -81,7 +83,7 @@ const Categorias = (props) => {
               <ButtonGroup>
                 <Link
                   className="btn btn-success rounded-pill mr-2"
-                  to={`/administracion/editarCategoria/${props.categoriaItem.id}`}
+                  to={`/administracion/editarCategoria/${props.categoriaItem._id}`}
                 >
                   <FontAwesomeIcon size="sm" icon={faEdit}></FontAwesomeIcon>
                   Editar
@@ -89,7 +91,7 @@ const Categorias = (props) => {
                 <Button
                   className="btn btn-danger rounded-pill mr-2"
                   type="button"
-                  onClick={() => eliminarCategoria(props.categoriaItem.id)}
+                  onClick={() => eliminarCategoria(props.categoriaItem._id)}
                 >
                   <FontAwesomeIcon size="sm" icon={faTrash}></FontAwesomeIcon>
                   Eliminar
@@ -98,29 +100,21 @@ const Categorias = (props) => {
             </Col>
           </Row>
         </Container>
-        <Accordion defaultActiveKey="1" className="py-2">
+        {/* <Accordion defaultActiveKey="1" className="py-2">
           <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
             <p className="text-primary">Ver lista de noticias</p>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <Table striped bordered hover size="sm" responsive>
               <tbody>
-                <tr>
-                  <td>nombre Noticias</td>
-                  <td className="text-center">
-                    <Button type="button">Ver</Button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>nombre Noticias</td>
-                  <td className="text-center">
-                    <Button type="button">Ver</Button>
-                  </td>
-                </tr>
+                {props.noticias.map((itemNoticia) => (
+                  <Noticia key={itemNoticia.id} noticiaItem={itemNoticia}
+                    setRecargarNoticias={props.setRecargarNoticias}></Noticia>
+                )).reverse()}
               </tbody>
             </Table>
           </Accordion.Collapse>
-        </Accordion>
+        </Accordion> */}
       </ListGroup.Item>
     </article>
   );

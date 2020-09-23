@@ -1,6 +1,11 @@
 .body {
   font-family: "Open Sans", sans-serif;
 }
+
+.nb-margin{
+  margin: 71.55px;
+}
+
 .btn-rn-outline {
   border: 1.2px solid #ff5e1f;
   border-radius: 50%;
@@ -204,6 +209,21 @@ div .cardCategoria {
   }
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1025px) {
+  .logoEncabezado{
+    object-fit: scale-down; 
+  max-height: 600px;
+  max-width: 150px;
+  }
+
+  .divNavbar{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+
 /* Dispositivos medianos */
 @media only screen and (min-width: 500px) and (max-width: 768px) {
   .divisas {
@@ -285,4 +305,9 @@ div .cardCategoria {
 
 .bg-naranja-fotografia{
   height: 160px !important;
+}
+/* Color portada */
+
+.portadaNosotros{
+  background-color: #1f1f1f;
 }

@@ -214,3 +214,7 @@
     -moz-box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
     box-shadow: 6px 6px 30px -6px rgba(0, 0, 0, 0.3);
   }
+
+  .bg-rn{
+      background-color: #ff5e1f;
+  }

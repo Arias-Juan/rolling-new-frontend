@@ -12,7 +12,7 @@ const VCard = (props) => {
             <div className="card-hover">
               <Link
                 exact={true}
-                to={`noticias/detalle/${itemNoticia.id}`}
+                to={`noticias/detalle/${itemNoticia._id}`}
                 className="text-decoration-none"
               >
                 <div>

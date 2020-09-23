@@ -2,7 +2,7 @@ import React from 'react';
 
 const Patrocinadores = () => {
     return (
-        <div className="mt-4 patrocinadores">
+        <div className="mt-4 patrocinadores d-none d-sm-block">
             <a className="text-decoration-none" href="https://rollingcodeschool.com/"
                 target="blank_">
                 <img

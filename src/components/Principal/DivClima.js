@@ -23,7 +23,7 @@ const DivClima = ({ clima, loader }) => {
           {
             (Object.entries(clima).length !== 0) ?
               <p className="align-self-center divisas mt-3">
-                <b>{(clima.main.temp) - 273.15} °C</b>
+                <b>{((clima.main.temp) - 273.15).toFixed(1)} °C</b>
               </p>
               : null
           }

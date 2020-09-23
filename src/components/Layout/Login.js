@@ -1,18 +1,50 @@
-import React, { Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import Card from "react-bootstrap/Card";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import "../../categorias.css";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
+import { Redirect } from 'react-router';
+
+
 
 const Login = () => {
+  const [error, setError] = useState(false);
+  const [errorMail, setErrorMail] = useState(false);
+  const [administrador, setAdministrador] = useState(false);
+
+  //para validaciones
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //validaciones para campos vacios
+    if (document.getElementById("formBasicEmail").value.trim() === "" || document.getElementById("formBasicPassword").value.trim() === "") {
+      setError(true);
+      return
+    }
+    //valdacion para email en formato incorrecto
+    const mailVerif = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+    if (mailVerif.test(document.getElementById("formBasicEmail").value)) {
+      setErrorMail(true);
+      return
+    }
+    setError(false)
+    //validaciones para administrador
+    if ((document.getElementById("formBasicEmail").value === "admin@admin.com") && (document.getElementById("formBasicPassword").value === "rolling")) {
+      setAdministrador(true);
+      return
+    }
+    
+  }
+  console.log(administrador)
   return (
     <div className="bg-login py-5">
       <div className="container">
         <div className="d-flex justify-content-center">
-          <Card className=" p-2">
+          <Card className="shadow p-2">
             <Card.Body>
               <h5 className="titulo-card text-center">Ingresar</h5>
               <hr></hr>
@@ -25,10 +57,17 @@ const Login = () => {
                   <i>¿Todavia no tienes una cuenta? Registrate aqui</i>
                 </p>
               </Link>
-              <Alert variant={'danger'}>
-                Todos los campos son obligatorios.
-              </Alert>
-              <Form>
+              {(error) ?
+                (<Alert variant={'danger'}>
+                  Todos los campos son obligatorios.
+                </Alert>)
+                : null}
+              {(errorMail) ?
+                (<Alert variant={'danger'}>
+                  El email ingresado no es válido
+                </Alert>)
+                : null}
+              <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>
                     <b>Email</b>
@@ -50,6 +89,10 @@ const Login = () => {
                 </Form.Group>
                 <Button variant="primary" type="submit" className="btn-rn my-3">
                   Ingresar
+                  {(administrador) ?
+                (<Redirect push to="/administracion" />)
+                : null}
+                  
                 </Button>
                 <hr></hr>
               </Form>

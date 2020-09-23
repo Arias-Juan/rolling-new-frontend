@@ -33,43 +33,43 @@ const NoticiasCategorias = (props) => {
                 breakpoints={{
                     //cuando el  ancho de la ventana es mayor o igual que 280
                     280: {
-                        width: 165,
+                        width: 248,
                         slidesPerView: 1,
                     },
 
                     320: {
-                        width: 192,
+                        width: 288,
                         slidesPerView: 1,
                     },
 
                     360: {
-                        width: 218,
+                        width: 328,
                         slidesPerView: 1,
                     },
                     375: {
-                        width: 228,
+                        width: 343,
                         slidesPerView: 1,
                     },
                     414: {
-                        width: 254,
+                        width: 379,
                         slidesPerView: 1,
                     },
                     768: {
-                        width: 490,
+                        width: 552,
                         slidesPerView: 2,
                     },
                     992: {
-                        width: 639,
+                        width: 744,
                         slidesPerView: 3,
                     },
                     1200: {
-                        width: 800,
+                        width: 899,
                         slidesPerView: 3,
                     }
                 }}
             >
                 {noticias.map((divNoticia) => (
-                    <SwiperSlide><CardCategoria key={divNoticia.id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
+                    <SwiperSlide><CardCategoria key={divNoticia._id} divNoticia={divNoticia} noticiasSwiper={props.noticiasSwiper}></CardCategoria></SwiperSlide>))}
             </Swiper>
         </div>
     );

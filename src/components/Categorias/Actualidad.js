@@ -5,15 +5,17 @@ import Body from "./Common/Body";
 import PublicidadH from "../common/PublicidadH";
 
 const Actualidad = (props) => {
-  const noticiasActualidad = props.noticias.filter((itemNoticia) => {
+  const noticiasPrimerFiltro = props.noticias.filter((itemNoticia) => {
     return (itemNoticia.categoria === "actualidad" || itemNoticia.principalCategoria === "true");
+  });
+
+  const noticiasActualidad = noticiasPrimerFiltro.filter((noticiasActualidad) => {
+    return (noticiasActualidad.categoria !== "fotografia");
   });
 
   const portadaActualidad = props.noticias.filter((itemNoticia) => {
     return (itemNoticia.principalCategoria === "true");
   });
-
-  //console.log(noticiasActualidad);
 
   return (
     <div>

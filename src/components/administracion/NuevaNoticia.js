@@ -61,7 +61,7 @@ const NuevaNoticia = (props) => {
         },
         body: JSON.stringify(datos),
       };
-      const resultado = await fetch(" http://localhost:4000/noticia", mandar);
+      const resultado = await fetch(" http://localhost:4000/api/rn/", mandar);
       console.log(resultado);
       // si todo salio bien
       if (resultado.status === 201) {
@@ -147,7 +147,8 @@ const NuevaNoticia = (props) => {
               <Form.Label className="font-weight-bold">
                 Descripcion detallada
               </Form.Label>
-              <Form.Control
+              <Form.Control 
+                as="textarea"
                 type="text"
                 placeholder=" Ej: boca gano 2 a 0"
                 name="descripcion detallada"
