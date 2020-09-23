@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const CardCategoria = (props) => {
-    console.log(props.divNoticia)
+    //console.log(props.divNoticia)
     let sectionStyle = {
         backgroundImage: `url(${props.divNoticia.imagenPrincipal})`
       };
