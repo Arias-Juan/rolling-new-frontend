@@ -12,7 +12,9 @@ const ListaCategoria = (props) => {
         <ListGroup className="mb-5">
           {props.categoriaNuevas.map((itemCategoria) => (
             <Categorias key={itemCategoria.id} categoriaItem={itemCategoria}
-              setRecargarCategoria={props.setRecargarCategoria}></Categorias>
+              setRecargarCategoria={props.setRecargarCategoria}
+              noticias={props.noticias}
+              ></Categorias>
           )).reverse()}
         </ListGroup>
       </section>

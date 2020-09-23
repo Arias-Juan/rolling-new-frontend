@@ -180,6 +180,7 @@ function App() {
           <ListaCategoria
             categoriaNuevas={categoriaNuevas}
             setRecargarCategoria={setRecargarCategoria}
+            noticias={noticias}
           ></ListaCategoria>
         </Route>
         <Route exact path="/administracion/nuevacategoria">

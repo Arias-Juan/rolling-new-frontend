@@ -97,7 +97,7 @@ const EditarCategoria = (props) => {
               defaultValue={props.Categoria.descripcionCategoria}
             />
           </Form.Group>
-          <Button variant="success" type="submit" className="w-100 my-5">
+          <Button variant="success" type="submit" className="w-100 my-5" disabled>
             Guardar Categoria
         </Button>
       </Form>

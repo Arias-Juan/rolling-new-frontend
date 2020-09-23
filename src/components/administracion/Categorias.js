@@ -11,6 +11,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
+import Noticia from "./Noticia";
 
 const Categorias = (props) => {
   const eliminarCategoria = (id) => {
@@ -64,6 +65,7 @@ const Categorias = (props) => {
       }
     });
   };
+
   return (
     <article>
       <ListGroup.Item>
@@ -98,29 +100,21 @@ const Categorias = (props) => {
             </Col>
           </Row>
         </Container>
-        <Accordion defaultActiveKey="1" className="py-2">
+        {/* <Accordion defaultActiveKey="1" className="py-2">
           <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
             <p className="text-primary">Ver lista de noticias</p>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
             <Table striped bordered hover size="sm" responsive>
               <tbody>
-                <tr>
-                  <td>nombre Noticias</td>
-                  <td className="text-center">
-                    <Button type="button">Ver</Button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>nombre Noticias</td>
-                  <td className="text-center">
-                    <Button type="button">Ver</Button>
-                  </td>
-                </tr>
+                {props.noticias.map((itemNoticia) => (
+                  <Noticia key={itemNoticia.id} noticiaItem={itemNoticia}
+                    setRecargarNoticias={props.setRecargarNoticias}></Noticia>
+                )).reverse()}
               </tbody>
             </Table>
           </Accordion.Collapse>
-        </Accordion>
+        </Accordion> */}
       </ListGroup.Item>
     </article>
   );
