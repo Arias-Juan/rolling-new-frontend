@@ -1,21 +1,14 @@
 import React from "react";
 import { Card, Container, Col, CardColumns } from "react-bootstrap";
-import logoFooter from "../../img/Principal/logo-footer.svg";
-import imgPrueba from "../../img/Pruebas/banner-publicidad-01.jpg";
-import lucasM from "../../img/Pruebas/lucasM.jpg";
-import lucianoG from "../../img/Pruebas/lucianoG.jpg";
-import lucianaG from "../../img/Pruebas/lucianaG.jpg";
-import juanD from "../../img/Pruebas/juanD.jpg";
-import juanA from "../../img/Pruebas/juanA.jpg";
-
 import { GiPlainCircle } from "react-icons/gi";
+
 const Nosotros = () => {
     return (
         <div>
             <Container>
                 <Card className="my-5">
                     <Card.Header className="bg-login text-right">
-                        <img src={logoFooter} width="40%" alt="React Bootstrap logo" />
+                        <img src={`${process.env.PUBLIC_URL}img/Principal/logo-footer.svg`} width="40%" alt="React Bootstrap logo" />
                     </Card.Header>
                     <Card.Body >
                         <article className="row">
@@ -87,69 +80,65 @@ const Nosotros = () => {
                         </article>
                         <CardColumns className="my-4">
                             <Card>
-                                <Card.Img variant="top" src={lucianaG} />
+                                <Card.Img variant="top" src={`${process.env.PUBLIC_URL}img/Pruebas/lucianaG.jpg`} />
                                 <blockquote className="blockquote mb-0 card-body">
                                     <Card.Title>Luciana Ghidara</Card.Title>
                                     <Card.Text>
-                                        This is a longer card with supporting text below as a natural lead-in to
-                                        additional content. This content is a little bit longer.
+                                       <p> Fotografa, amante de la economia, estudiante de programacion en Rolling Code School.</p>
                                     </Card.Text>
                                 </blockquote>
                             </Card>
                             <Card className="p-3">
-                                <Card.Img variant="top" src={juanA} />
+                                <Card.Img variant="top" src={`${process.env.PUBLIC_URL}img/Pruebas/juanA.jpg`} />
                                 <blockquote className="blockquote mb-0 card-body">
                                     <Card.Title>Juan Arias</Card.Title>
                                     <Card.Text>
-                                        This is a longer card with supporting text below as a natural lead-in to
-                                        additional content. This content is a little bit longer.
+                                       <p> Reportero, apasionado por policiales, estudiante en RC. </p>
                                     </Card.Text>
                                 </blockquote>
                             </Card>
                             <Card>
-                                <Card.Img variant="top" src={lucianoG} />
+                                <Card.Img variant="top" src={`${process.env.PUBLIC_URL}img/Pruebas/lucianoG.jpg`} />
                                 <blockquote className="blockquote card-body">
                                     <Card.Title>Luciano N. Gramajo</Card.Title>
                                     <Card.Text>
-                                        Orgulloso de ser argentino, soltero y estudio programacion de software en Rolling Code.
+                                      <p>  Orgulloso de ser argentino, soltero y estudio programacion de software en Rolling Code.</p>
                                     </Card.Text>
                                 </blockquote>
                             </Card>
-                            <Card bg="primary" text="white" className="text-center p-3">
-                                <blockquote className="blockquote mb-0 card-body">
-                                    <Card.Title>Rolling New</Card.Title>
+                            <Card text="white" className="text-center p-3 pre-footer border-0">
+                                <blockquote className="blockquote mb-0 card-body pre-footer">
+                                    <Card.Title className="pre-footer">Rolling News</Card.Title>
                                     <Card.Text>
-                                        Nuestro objetivo: Poder llegar a todos nuestros lectores y poder informarnos en todo lo posible en este basto mundo.
+                                       <p> Nuestro objetivo: Poder llegar a todos nuestros lectores y poder informarnos en todo lo posible en este basto mundo.</p>
                                     </Card.Text>
                                 </blockquote>
                             </Card>
                             <Card className="text-center">
-                            <Card.Img variant="top" src={juanD} />
+                            <Card.Img variant="top" src={`${process.env.PUBLIC_URL}img/Pruebas/juanD.jpg`} />
                             <blockquote className="blockquote card-body">
                                     <Card.Title>Juan D'amichici</Card.Title>
                                     <Card.Text>
-                                        This card has supporting text below as a natural lead-in to additional content.{' '}
+                                       <p> Amante de los deportes (boca) y de la programacion.{' '}</p>
                                     </Card.Text>
 
                                 </blockquote>
                             </Card>
                             <Card>
-                                <Card.Img src={lucasM} />
+                                <Card.Img src={`${process.env.PUBLIC_URL}img/Pruebas/lucasM.jpg`} />
                                 <blockquote className="blockquote mb-0 card-body">
                                     <Card.Title>Lucas Martinez</Card.Title>
                                     <Card.Text>
-                                    Lucas es estudiante de diseño y aprendio a programar paginas web en Rolling. Le gusta trabajar con musica techno a todo volumen y hacer breaks jugando al Valorant (no es muy bueno pero le pone actitud).
+                                   <p> Lucas es estudiante de diseño y aprendio a programar paginas web en Rolling. Le gusta trabajar con musica techno a todo volumen y hacer breaks jugando al Valorant (no es muy bueno pero le pone actitud).</p>
                                     </Card.Text>
                                 </blockquote>
                             </Card>
                             <Card>
-                                <Card.Img variant="top" src={imgPrueba} />
+                                <Card.Img variant="top" src={`${process.env.PUBLIC_URL}img/Pruebas/HugoJ.jpg`} />
                                 <blockquote className="blockquote card-body">
                                     <Card.Title>Hugo Gimenez</Card.Title>
                                     <Card.Text>
-                                        This is a wider card with supporting text below as a natural lead-in to
-                                        additional content. This card has even longer content than the first to
-                                        show that equal height action.
+                                       <p> Escritor de noticias, loco por el espectaculo y estudiante de programacion en Rolling.</p>
                                     </Card.Text>
                                 </blockquote>
                             </Card>

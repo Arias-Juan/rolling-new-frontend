@@ -87,7 +87,7 @@ const Header = () => {
           <Container className="divNavbar">
             <NavLink exact={true} to="/" className="mr-2">
               <img
-                src={logoEncabezado}
+                src={`${process.env.PUBLIC_URL}img/Principal/logo-encabezado.svg`}
                 width="200rem"
                 alt="React Bootstrap logo"
                 className="logoEncabezado"
@@ -176,7 +176,7 @@ const Header = () => {
           <Modal.Header closeButton>
             <Modal.Title>
               <img
-                src={logoEncabezado}
+                src={`${process.env.PUBLIC_URL}img/Principal/logo-encabezado.svg`}
                 width="200rem"
                 alt="React Bootstrap logo"
               />
