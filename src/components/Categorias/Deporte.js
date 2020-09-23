@@ -13,17 +13,17 @@ const Deporte = (props) => {
   });
 
   //console.log(noticiasDeporte);
-    return (
-        <div>
-        <Banner titulo={props.categorias[1]} noticias={portada}></Banner>
-        <hr></hr>
-        <div className="container-fluid">
-          <PublicidadH></PublicidadH>
-        </div>
-        <hr></hr>
-        <Body noticias={noticiasDeporte}></Body>
+  return (
+    <div>
+      <Banner titulo={props.categorias[1]} noticias={portada}></Banner>
+      <hr></hr>
+      <div className="container-fluid">
+        <PublicidadH></PublicidadH>
       </div>
-    );
+      <hr></hr>
+      <Body noticias={noticiasDeporte}></Body>
+    </div>
+  );
 };
 
 export default Deporte;
