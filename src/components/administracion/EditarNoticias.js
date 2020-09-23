@@ -10,6 +10,8 @@ const EditarNoticias = (props) => {
   // genero mis ref
   const tituloNoticiaRef = useRef("");
   const categoriaRef = useRef("");
+  const principalPortadaRef = useRef("");
+  const principalCategoriaRef = useRef("");
   const descripcionBreveRef = useRef("");
   const descripcionDetalladaRef = useRef("");
   const imagenPrincipalRef = useRef("");
@@ -30,7 +32,7 @@ const EditarNoticias = (props) => {
   const portadaPrincipal = (e) => {
     if (e.target.value === "true") {
       setPrincipalPortada("true");
-    } else {
+    } else if(e.target.value === "false"){
       setPrincipalPortada("false");
     }
   };
@@ -39,7 +41,7 @@ const EditarNoticias = (props) => {
   const portadaCategoria = (e) => {
     if (e.target.value === "true") {
       setPrincipalCategoria("true");
-    } else {
+    } else if (e.target.value === "false"){
       setPrincipalCategoria("false");
     }
   };
@@ -70,7 +72,7 @@ const EditarNoticias = (props) => {
       imagenPrincipalRef.current.value.trim() === "" ||
       autorRef.current.value.trim() === "" ||
       _categoria === "" ||
-      principalPortada === "" ||
+      _principalPortada === "" ||
       _principalCategoria === "" ||
       fechaRef.current.value.trim() === ""
     ) {
@@ -87,6 +89,8 @@ const EditarNoticias = (props) => {
       descripcionDetallada: descripcionDetalladaRef.current.value,
       imagenPrincipal: imagenPrincipalRef.current.value,
       categoria: categoriaRef.current.value,
+      principalPortada: principalPortadaRef.current.value,
+      principalCategoria: principalCategoriaRef.current.value,
       autor: autorRef.current.value,
       fecha: fechaRef.current.value
     }
