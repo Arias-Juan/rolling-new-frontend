@@ -17,7 +17,7 @@ const EditarNoticias = (props) => {
   const fechaRef = useRef("");
   ///
   console.log(props)
-  
+
   const [categoria, setCategoria] = useState("");
   const [principalPortada, setPrincipalPortada] = useState("");
   const [principalCategoria, setPrincipalCategoria] = useState("");
@@ -44,11 +44,11 @@ const EditarNoticias = (props) => {
     }
   };
 
-  
+
   // me creo un state que me va a servir para mostrar el error
   const [error, setError] = useState(false);
 
-  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -80,24 +80,19 @@ const EditarNoticias = (props) => {
     }
 
     setError(false);
-
     //preparar el objeto a enviar
     const noticiaEditada = {
       tituloNoticia: tituloNoticiaRef.current.value,
       descripcionBreve: descripcionBreveRef.current.value,
       descripcionDetallada: descripcionDetalladaRef.current.value,
       imagenPrincipal: imagenPrincipalRef.current.value,
-      categoria: _categoria,
+      categoria: categoriaRef.current.value,
       autor: autorRef.current.value,
-      principalPortada: _principalPortada,
-      principalCategoria: _principalCategoria,
-      fecha: fechaRef.current.value,
+      fecha: fechaRef.current.value
     }
-
-    
     //envio los cambios a la api
     try {
-      const respuesta = await fetch(`http://localhost:4000/noticia/${props.noticia.id}`, {
+      const respuesta = await fetch(`http://localhost:4000/api/rn/${props.noticia._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -281,11 +276,11 @@ const EditarNoticias = (props) => {
               Descripcion detallada
             </Form.Label>
             <Form.Control as="textarea"
-            type="text"
-            placeholder=" Ej: boca gano 2 a 0"
-            name="descripcion breve"
-            ref={descripcionDetalladaRef}
-            defaultValue={props.noticia.descripcionDetallada} />
+              type="text"
+              placeholder=" Ej: boca gano 2 a 0"
+              name="descripcion breve"
+              ref={descripcionDetalladaRef}
+              defaultValue={props.noticia.descripcionDetallada} />
           </Form.Group>
           <Form.Group>
             <Form.Label className="font-weight-bold">
@@ -327,7 +322,7 @@ const EditarNoticias = (props) => {
           </Button>
         </Form>
       </section>
-    </Fragment>  );
+    </Fragment>);
 };
 
 export default withRouter(EditarNoticias);

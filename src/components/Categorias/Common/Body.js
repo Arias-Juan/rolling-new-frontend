@@ -24,7 +24,7 @@ const Body = (props) => {
               {
                 props.noticias.map((itemNoticia) => (
                   <Cards
-                    key={itemNoticia.id}
+                    key={itemNoticia._id}
                     noticias={itemNoticia}
                   ></Cards>
                   )).reverse()
@@ -49,7 +49,7 @@ const Body = (props) => {
                         <Link
                           className="card-texto text-decoration-none"
                           exact={true}
-                          to={`/noticias/detalle/${itemNoticia.id}`}
+                          to={`/noticias/detalle/${itemNoticia._id}`}
                         >
                           {itemNoticia.tituloNoticia}
                         </Link>

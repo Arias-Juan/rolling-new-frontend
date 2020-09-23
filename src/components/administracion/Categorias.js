@@ -14,8 +14,8 @@ import Table from "react-bootstrap/Table";
 import Noticia from "./Noticia";
 
 const Categorias = (props) => {
-  const eliminarCategoria = (id) => {
-    console.log(id);
+  const eliminarCategoria = (_id) => {
+    console.log(_id);
 
     Swal.fire({
       title: "¿Estas seguro de eliminar esta categoria?",
@@ -31,7 +31,7 @@ const Categorias = (props) => {
         //aqui tengo que eliminar el producto
         try {
           const resultado = await fetch(
-            `http://localhost:4000/categoria/${id}`,
+            `http://localhost:4000/categoria/${_id}`,
             {
               method: "DELETE",
               headers: {
@@ -83,7 +83,7 @@ const Categorias = (props) => {
               <ButtonGroup>
                 <Link
                   className="btn btn-success rounded-pill mr-2"
-                  to={`/administracion/editarCategoria/${props.categoriaItem.id}`}
+                  to={`/administracion/editarCategoria/${props.categoriaItem._id}`}
                 >
                   <FontAwesomeIcon size="sm" icon={faEdit}></FontAwesomeIcon>
                   Editar
@@ -91,7 +91,7 @@ const Categorias = (props) => {
                 <Button
                   className="btn btn-danger rounded-pill mr-2"
                   type="button"
-                  onClick={() => eliminarCategoria(props.categoriaItem.id)}
+                  onClick={() => eliminarCategoria(props.categoriaItem._id)}
                 >
                   <FontAwesomeIcon size="sm" icon={faTrash}></FontAwesomeIcon>
                   Eliminar
