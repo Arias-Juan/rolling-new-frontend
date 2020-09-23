@@ -54,15 +54,15 @@ const EditarNoticias = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const _categoria = categoria === "" ? props.noticia.categoria : categoria;
-    const _principalPortada =
-      principalPortada === ""
-        ? props.noticia.principalPortada
-        : principalPortada;
-    const _principalCategoria =
-      principalCategoria === ""
-        ? props.noticia.principalCategoria
-        : principalCategoria;
+    // const _categoria = categoria === "" ? props.noticia.categoria : categoria;
+    // const _principalPortada =
+    //   principalPortada === ""
+    //     ? props.noticia.principalPortada
+    //     : principalPortada;
+    // const _principalCategoria =
+    //   principalCategoria === ""
+    //     ? props.noticia.principalCategoria
+    //     : principalCategoria;
     //validar los datos
 
     if (
