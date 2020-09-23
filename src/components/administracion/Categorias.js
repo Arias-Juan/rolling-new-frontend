@@ -31,7 +31,7 @@ const Categorias = (props) => {
         //aqui tengo que eliminar el producto
         try {
           const resultado = await fetch(
-            `http://localhost:4000/categoria/${_id}`,
+            `https://rollingnewsbc.herokuapp.com/categoria/${_id}`,
             {
               method: "DELETE",
               headers: {

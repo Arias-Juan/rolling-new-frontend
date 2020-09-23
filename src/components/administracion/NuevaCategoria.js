@@ -40,7 +40,7 @@ const NuevaCategoria = (props) => {
         },
         body: JSON.stringify(datos),
       };
-      const resultado = await fetch(" http://localhost:4000/categoria", mandar);
+      const resultado = await fetch(" https://rollingnewsbc.herokuapp.com/categoria", mandar);
       console.log(resultado);
       // si todo salio bien
       if (resultado.status === 201) {
