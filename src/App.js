@@ -178,7 +178,7 @@ function App() {
         </Route>
         <Route exact path="/administracion/categoria">
           <ListaCategoria
-            categoriaNuevas={categoriaNuevas}
+            categorias={categorias}
             setRecargarCategoria={setRecargarCategoria}
             noticias={noticias}
           ></ListaCategoria>
