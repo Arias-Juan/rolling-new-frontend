@@ -106,7 +106,7 @@
 
 .card-texto:hover{
     color: #000000;
-    opacity: 100%;
+    text-decoration: underline;
 }
 
 .card-hover{
